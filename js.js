@@ -52,33 +52,20 @@ function formatDate(date)
 function addEvent(type, startDate, endDate, text)
 {
     var div = document.createElement('div');
-    div.innerHTML = "<div class=\"inner\"><p><b>" + startDate + " - " + endDate + "</b><br>" + text + "</p></div>";
-
-    div.setAttribute('class', 'timeLineEvent');
-
-    div.style.top = _timeline.getDateDistance(parseDate(startDate)) * DAY_PIXEL_LENGTH + "px";
-    div.style.height = (_timeline.getDateDistance(parseDate(endDate)) - _timeline.getDateDistance(parseDate(startDate))) * DAY_PIXEL_LENGTH + "px";
+    div.setAttribute('class', 'inner');
     div.style.backgroundColor = getRandomColor();
+    div.innerHTML = "<p><b>" + startDate + " - " + endDate + "</b><br>" + text + "</p>";
 
-    var container;
+    var outer_div = document.createElement('div');
+    outer_div.setAttribute('class', 'event');
+    outer_div.style.top = _timeline.getDateDistance(parseDate(startDate)) * DAY_PIXEL_LENGTH + "px";
+    outer_div.style.height = (_timeline.getDateDistance(parseDate(endDate)) - _timeline.getDateDistance(parseDate(startDate))) * DAY_PIXEL_LENGTH + "px";
+    outer_div.appendChild(div);
 
-    switch (type)
-    {
-        case EVENT_TYPE.LIFE:
-            div.style.right = "10px";
-            container = document.getElementById("divLeftEventContainer");;
-            break;
-        case EVENT_TYPE.CAREER:
-            div.style.left = "10px";
-            container = document.getElementById("divRightEventContainer");;
-            break;
-        default:
-            break;
-    }
+    var container = document.getElementById("divEventContainer");
+    container.appendChild(outer_div);
 
-    container.appendChild(div);
-
-    return div;
+    return outer_div;
 }
 
 
@@ -267,9 +254,6 @@ function init()
 
 		_timeline = new TimeLine(timeline_start, timeline_end);
 		var length = _timeline.getLength();
-
-		var right_container = document.getElementById("divRightEventContainer");
-		_containerWidth = getElementWidth(right_container);
 
 		var timeline_container = document.getElementById("divTimeLine");
 		_timelineWidth = getElementWidth(timeline_container);

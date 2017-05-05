@@ -4,25 +4,16 @@ p, h1 {
 
 
 .timeLineContainer{
-	width: 100%; 
-	height: 100%; 
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 	background: #FFFFFF;
 	border: 1px solid blue;
 }
 
 
-.eventContainer{
-	width: 45%; 
-	height: 100%;
-	float: left;
-	position:relative;
-	overflow:hidden;
-}
-
-
 .timeLine{
-	width: 10%; 
+	width: 10%;
 	height: 100%;
 	float: left;
 	background: #BEFFBD;
@@ -36,22 +27,21 @@ p, h1 {
 	background: #00FF00;
 }
 
-.timeLineEvent{
-	width: 200px; 
-	height: 80px; 
-	
+
+.eventContainer{
+	width: 45%;
+	height: 100%;
+	float: left;
+	position:relative;
+	overflow:hidden;
+}
+
+.event{
+	width: 200px;
 	position:absolute;
-	
-	border-radius: 25px;
 }
 
 
-.timeLineEvent p{
-	padding-left: 15px;
-}
-
-.timeLineEvent .inner {
-    display: inline-block;
-    background: #FF0000;
+.event .inner {
 }
 
