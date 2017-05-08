@@ -213,8 +213,8 @@ function relative_scroll(parent) {
 }
 
 function scroll() {
-    for (var i = 0; i < _emptyArray.length; i++) {
-        var parent=_emptyArray[i];
+    for (var i = 0; i < _EVENTS.length; i++) {
+        var parent=_EVENTS[i];
         relative_scroll(parent);
     }
 }
@@ -225,29 +225,7 @@ function scroll() {
 
 
 
-
-
-
-var TIME_START = "01/01/1970";
-var TIME_END = "01/01/2017";
-var DAY_PIXEL_LENGTH = 0.5
-
-var EVENT_TYPE = {	LIFE:0,
-                    CAREER:1};
-
-var _timeline;
-var _containerWidth;
-var _timelineWidth;
-var _emptyArray;
-var _lastScrollPosition;
-
-eventData = [
-    {"title": "test", "date": "01/01/1985", "endDate": "31/12/2001", "type": 0}
-    ]
-
-
-
-function init()
+function init_timeline()
 	{
 		var timeline_start = parseDate(TIME_START);
 		var timeline_end = parseDate(TIME_END);
@@ -257,15 +235,6 @@ function init()
 
 		var timeline_container = document.getElementById("divTimeLine");
 		_timelineWidth = getElementWidth(timeline_container);
-
-        total_empties = 0;
-		_emptyArray = new Array(total_empties);
-
-		// add events
-		for (var i = 0; i < eventData.length; i++)
-		{
-            _emptyArray[i] = addEvent(eventData[i].type, eventData[i].date, eventData[i].endDate, eventData[i].title);
-		}
 
 		// resize container
 		var container = document.getElementById("divTimeLineContainer");
@@ -282,5 +251,18 @@ function init()
 		}
 
 	}
+
+
+
+function init_data(eventData)
+{
+    _EVENTS = new Array();
+    // add events
+    for (var i = 0; i < eventData.length; i++)
+    {
+        _EVENTS[i] = addEvent(0, eventData[i].start, eventData[i].end, eventData[i].name);
+    }
+
+}
 
 
