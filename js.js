@@ -56,8 +56,8 @@ function addEvent(event)
     var div = document.createElement('div');
     div.setAttribute('class', 'inner');
     div.style.backgroundColor = getRandomColor();
-    var ih = "<p><b>" + d_start.getYear();
-    if (d_end.getYear() != d_start.getYear()) ih = ih + " - " + d_end.getYear() + "</b><br>";
+    var ih = "<p><b>" + d_start.getFullYear();
+    if (d_end.getFullYear() != d_start.getFullYear()) ih = ih + " - " + d_end.getFullYear() + "</b><br>";
     ih = ih + event.name + "</p>";
     if (event.image) {
         ih = ih + "<div><img src=\"img/" + event.image + "\" alt=\"\" /></div>";
