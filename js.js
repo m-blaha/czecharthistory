@@ -49,17 +49,25 @@ function formatDate(date)
 }
 
 
-function addEvent(type, startDate, endDate, text)
+function addEvent(event)
 {
+    var d_start=parseDate(event.start);
+    var d_end=parseDate(event.end);
     var div = document.createElement('div');
     div.setAttribute('class', 'inner');
     div.style.backgroundColor = getRandomColor();
-    div.innerHTML = "<p><b>" + startDate + " - " + endDate + "</b><br>" + text + "</p>";
+    var ih = "<p><b>" + d_start.getYear();
+    if (d_end.getYear() != d_start.getYear()) ih = ih + " - " + d_end.getYear() + "</b><br>";
+    ih = ih + event.name + "</p>";
+    if (event.image) {
+        ih = ih + "<div><img src=\"img/" + event.image + "\" alt=\"\" /></div>";
+    }
+    div.innerHTML = ih;
 
     var outer_div = document.createElement('div');
-    outer_div.setAttribute('class', 'event');
-    outer_div.style.top = _timeline.getDateDistance(parseDate(startDate)) * DAY_PIXEL_LENGTH + "px";
-    outer_div.style.height = (_timeline.getDateDistance(parseDate(endDate)) - _timeline.getDateDistance(parseDate(startDate))) * DAY_PIXEL_LENGTH + "px";
+    outer_div.setAttribute('class', 'event ' + event.cls);
+    outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
+    outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
     outer_div.appendChild(div);
 
     var container = document.getElementById("divEventContainer");
@@ -260,7 +268,7 @@ function init_data(eventData)
     // add events
     for (var i = 0; i < eventData.length; i++)
     {
-        _EVENTS[i] = addEvent(0, eventData[i].start, eventData[i].end, eventData[i].name);
+        _EVENTS[i] = addEvent(eventData[i]);
     }
 
 }

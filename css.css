@@ -29,7 +29,7 @@ p, h1 {
 
 
 .eventContainer{
-	width: 45%;
+	width: 90%;
 	height: 100%;
 	float: left;
 	position:relative;
@@ -43,5 +43,25 @@ p, h1 {
 
 
 .event .inner {
+    overflow: hidden;
+    opacity: 0.5;
 }
 
+.event.col-1 {
+    margin-left: 0px;
+}
+.event.col-2 {
+    margin-left: 200px;
+}
+.event.col-3 {
+    margin-left: 400px;
+}
+.event.col-4 {
+    margin-left: 600px;
+}
+.event.col-5 {
+    margin-left: 800px;
+}
+.event.col-6 {
+    margin-left: 1000px;
+}

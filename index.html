@@ -23,7 +23,8 @@
 
         $(document).ready(function() {
             init_timeline();
-            init_data(DATA.events);
+            init_data(EVENTS);
+            scroll();
             $(window).scroll(function() {scroll();});
         });
 
