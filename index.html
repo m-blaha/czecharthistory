@@ -10,7 +10,7 @@
     <script type="text/javascript">
         var TIME_START = "01/01/1940";
         var TIME_END = "01/01/2017";
-        var DAY_PIXEL_LENGTH = 0.4;
+        var DAY_PIXEL_LENGTH = 1.0;
 
         var EVENT_TYPE = {	LIFE:0,
                             CAREER:1};
@@ -26,6 +26,16 @@
             init_data(EVENTS);
             scroll();
             $(window).scroll(function() {scroll();});
+
+            $('input[name="events"]').change(function() {
+                $('.event.events').toggle();
+            });
+            $('input[name="styles"]').change(function() {
+                $('.event.styles').toggle();
+            });
+            $('input[name="artworks"]').change(function() {
+                $('.event.artworks').toggle();
+            });
         });
 
 
@@ -35,6 +45,12 @@
 <body>
     <div class="info">
         <h1>HTML Parallax Scrolling Timeline</h1>
+        <form class="filters">
+            <input type="checkbox" name="events" checked="checked" /> events
+            <input type="checkbox" name="styles" checked="checked" /> styles
+            <input type="checkbox" name="artworks" checked="checked" /> artworks
+        </form>
+
     </div>
 
     <div id="divTimeLineContainer" class="timeLineContainer">

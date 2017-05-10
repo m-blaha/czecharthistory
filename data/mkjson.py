@@ -94,7 +94,7 @@ if __name__ == '__main__':
     data = parse_events('events.csv')
     data.extend(parse_artworks('artworks.csv'))
     data.extend(parse_styles('styles.csv'))
-    file('data.js', 'w').write('var EVENTS=%s;' % json.dumps(data))
+    file('data.js', 'w').write('var EVENTS=%s;' % json.dumps(data, indent=2))
 
     #try:
     #    csvfname = sys.argv[1]
