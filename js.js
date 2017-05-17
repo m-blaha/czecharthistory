@@ -55,12 +55,16 @@ function addEvent(event)
     var d_end=parseDate(event.end);
     var div = document.createElement('div');
     div.setAttribute('class', 'inner');
-    div.style.backgroundColor = getRandomColor();
-    var ih = "<p><b>" + d_start.getFullYear();
-    if (d_end.getFullYear() != d_start.getFullYear()) ih = ih + " - " + d_end.getFullYear() + "</b><br>";
-    ih = ih + event.name + "</p>";
+    /*div.style.backgroundColor = getRandomColor();*/
+    var ih = "<div class=\"year\">" + d_start.getFullYear();
+    if (d_end.getFullYear() != d_start.getFullYear()) ih = ih + " - " + d_end.getFullYear();
+    ih = ih + "</div>";
     if (event.image) {
-        ih = ih + "<div><img src=\"img/" + event.image + "\" alt=\"\" /></div>";
+        ih = ih + "<div class=\"image\"><img src=\"img/" + event.image + "\" alt=\"\" /></div>";
+    }
+    ih = ih + "<div class=\"name\">" + event.name + "</div>";
+    if (event.description) {
+        ih += "<div class=\"description\">" + event.description + "</div>";
     }
     div.innerHTML = ih;
 
@@ -68,6 +72,7 @@ function addEvent(event)
     outer_div.setAttribute('class', 'event ' + event.cls);
     outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
     outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
+    outer_div.style.marginLeft = randomInteger(0,1000) + "px";
     outer_div.appendChild(div);
 
     var container = document.getElementById("divEventContainer");

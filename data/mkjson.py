@@ -22,7 +22,7 @@ def mkjson(csvfname):
 
 
 def random_cls():
-    return 'col-%s' % random.randint(2,6)
+    return 'col-%s' % random.randint(1,6)
 
 def parse_events(csvfname):
     csv_in = csv.reader(file(csvfname, 'r'))
@@ -80,7 +80,7 @@ def parse_styles(csvfname):
         line_d['start'] = '01/01/%s' % line_d['start']
         line_d['end'] = '31/01/%s' % line_d['end']
         cls = ['styles']
-        cls.append('col-1') #random_cls())
+        cls.append(random_cls())
         lines.append(dict(
             start=line_d['start'],
             end=line_d['end'],

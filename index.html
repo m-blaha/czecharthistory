@@ -27,14 +27,9 @@
             scroll();
             $(window).scroll(function() {scroll();});
 
-            $('input[name="events"]').change(function() {
-                $('.event.events').toggle();
-            });
-            $('input[name="styles"]').change(function() {
-                $('.event.styles').toggle();
-            });
-            $('input[name="artworks"]').change(function() {
-                $('.event.artworks').toggle();
+            $('input.classfilter').change(function() {
+                $('.event.' + $(this).val()).toggle();
+                scroll();
             });
         });
 
@@ -46,9 +41,16 @@
     <div class="info">
         <h1>HTML Parallax Scrolling Timeline</h1>
         <form class="filters">
-            <input type="checkbox" name="events" checked="checked" /> events
-            <input type="checkbox" name="styles" checked="checked" /> styles
-            <input type="checkbox" name="artworks" checked="checked" /> artworks
+            <div>
+                <input type="checkbox" value="world" checked="checked" class="classfilter"/> world
+                <input type="checkbox" value="czech" checked="checked" class="classfilter"/> czech
+            </div>
+            <div>
+                <input type="checkbox" value="politics" checked="checked" class="classfilter"/> politics
+                <input type="checkbox" value="art" checked="checked" class="classfilter"/> art
+                <input type="checkbox" value="culture" checked="checked" class="classfilter"/> culture
+                <input type="checkbox" value="sciencetechnology" checked="checked" class="classfilter"/> technology
+            </div>
         </form>
 
     </div>
