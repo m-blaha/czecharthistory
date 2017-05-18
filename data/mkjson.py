@@ -24,6 +24,34 @@ def mkjson(csvfname):
 def random_cls():
     return 'col-%s' % random.randint(1,6)
 
+
+obsazeno_rok = dict()
+num_cols = 6
+
+def optimal_col(start, end):
+    # najit
+    cols = dict()
+    for c in range(num_cols):
+        cols[c] = 0
+    for year in range(start, end+1):
+        o_r = obsazeno_rok.get(year, dict())
+        for c in range(num_cols):
+            cols[c] += o_r.get(c, 0)
+    min_val = min(cols.itervalues())
+    min_cols = [c for c,v in cols.iteritems() if v==min_val]
+    column = random.choice(min_cols)
+
+    # obsadit
+    for year in range(start, end+1):
+        o_r = obsazeno_rok.setdefault(year, dict())
+        if column in o_r:
+            o_r[column] += 1
+        else:
+            o_r[column] = 1
+
+    return column
+
+
 def parse_events(csvfname):
     csv_in = csv.reader(file(csvfname, 'r'))
     fields = csv_in.next()
@@ -31,10 +59,11 @@ def parse_events(csvfname):
     for line in csv_in:
         line_d = dict(zip(fields, line))
         if not line_d['end']: line_d['end'] = line_d['start']
+        cls = ['events']
+        #cls.append(random_cls())
+        opt_c = optimal_col(int(line_d['start']), int(line_d['end']))
         line_d['start'] = '01/01/%s' % line_d['start']
         line_d['end'] = '31/01/%s' % line_d['end']
-        cls = ['events']
-        cls.append(random_cls())
         cls.append(line_d['type'].replace('&',''))
         cls.append(line_d['nationality'])
         lines.append(dict(
@@ -44,6 +73,7 @@ def parse_events(csvfname):
             description=line_d['description'],
             cls=' '.join([c for c in cls if c]),
             image=line_d['image'],
+            opt_c=opt_c,
             ))
 
     return lines
@@ -55,10 +85,11 @@ def parse_artworks(csvfname):
     for line in csv_in:
         line_d = dict(zip(fields, line))
         if not line_d['end']: line_d['end'] = line_d['start']
+        cls = ['artworks']
+        #cls.append(random_cls())
+        opt_c = optimal_col(int(line_d['start']), int(line_d['end']))
         line_d['start'] = '01/01/%s' % line_d['start']
         line_d['end'] = '31/01/%s' % line_d['end']
-        cls = ['artworks']
-        cls.append(random_cls())
         lines.append(dict(
             start=line_d['start'],
             end=line_d['end'],
@@ -66,6 +97,7 @@ def parse_artworks(csvfname):
             description=' '.join([line_d['first'], line_d['last']]),
             cls=' '.join([c for c in cls if c]),
             image=line_d['image'],
+            opt_c=opt_c,
             ))
 
     return lines
@@ -77,15 +109,17 @@ def parse_styles(csvfname):
     for line in csv_in:
         line_d = dict(zip(fields, line))
         if not line_d['end']: line_d['end'] = line_d['start']
+        cls = ['styles']
+        #cls.append(random_cls())
+        opt_c = optimal_col(int(line_d['start']), int(line_d['end']))
         line_d['start'] = '01/01/%s' % line_d['start']
         line_d['end'] = '31/01/%s' % line_d['end']
-        cls = ['styles']
-        cls.append(random_cls())
         lines.append(dict(
             start=line_d['start'],
             end=line_d['end'],
             name=line_d['name'],
             cls=' '.join([c for c in cls if c]),
+            opt_c=opt_c,
             ))
 
     return lines
