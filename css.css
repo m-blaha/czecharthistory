@@ -39,11 +39,13 @@ p, h1 {
 .event{
 	width: 200px;
 	position:absolute;
+    pointer-events: none;
 }
 
 
 .event .inner {
     overflow: hidden;
+    pointer-events:auto;
 }
 
 .event.col-1 {

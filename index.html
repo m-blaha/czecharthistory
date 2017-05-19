@@ -2,9 +2,13 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="featherlight.min.js"></script>
+	<script type="text/javascript" src="underscore-min.js"></script>
 	<script type="text/javascript" src="js.js"></script>
+	<link rel="stylesheet" href="featherlight.min.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
 
     <script type="text/javascript">
@@ -22,6 +26,26 @@
         var _EVENTS;
         var _lastScrollPosition;
 
+
+        var popup_tmpl = _.template([
+              "<div class='popup'>",
+              "  <h2>čau</h2>",
+              "</div>"
+            ].join("\n"));
+
+        var event_tmpl = _.template([
+                "<div class='inner'>",
+                "    <div class='year'><%= years %></div>",
+                "    <% if (typeof(image) !== 'undefined') { %>",
+                "        <div class='image'><img src='img/<%= image %>' alt='' /></div>",
+                "    <% } %>",
+                "    <div class='name'><%= name %></div>",
+                "    <% if (typeof(description) !== 'undefined') { %>",
+                "        <div class='description'><%= description %></div>",
+                "    <% } %>",
+                "</div>"
+            ].join("\n"));
+
         $(document).ready(function() {
             init_timeline();
             init_data(EVENTS);
@@ -31,6 +55,10 @@
             $('input.classfilter').change(function() {
                 $('.event.' + $(this).val()).toggle();
                 scroll();
+            });
+
+            $('.event .inner').on('click', '*', function() {
+                $.featherlight($(popup_tmpl()), {});
             });
         });
 
