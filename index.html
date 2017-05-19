@@ -30,6 +30,12 @@
         var popup_tmpl = _.template([
               "<div class='popup'>",
               "  <h2><%= name %></h2>",
+                "    <% if (typeof(image) !== 'undefined') { %>",
+                "        <div class='image'><img src='img/<%= image %>' alt='' /></div>",
+                "    <% } %>",
+                "    <% if (typeof(description) !== 'undefined') { %>",
+                "        <div class='description'><%= description %></div>",
+                "    <% } %>",
               "</div>"
             ].join("\n"));
 
