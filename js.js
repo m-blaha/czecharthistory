@@ -72,7 +72,7 @@ function addEvent(event)
     outer_div.setAttribute('class', 'event ' + event.cls);
     outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
     outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
-    outer_div.style.marginLeft = (event.opt_c*EVENT_WIDTH + randomInteger(-50,50)) + "px";
+    outer_div.style.marginLeft = (50 + event.opt_c*EVENT_WIDTH + randomInteger(-50,50)) + "px";
     outer_div.appendChild(div);
 
     var container = document.getElementById("divEventContainer");
