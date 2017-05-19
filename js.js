@@ -49,7 +49,7 @@ function formatDate(date)
 }
 
 
-function addEvent(event)
+function addEvent(event, event_index)
 {
     var d_start=parseDate(event.start);
     var d_end=parseDate(event.end);
@@ -60,6 +60,7 @@ function addEvent(event)
     div = event_tmpl(event);
 
     var outer_div = document.createElement('div');
+    outer_div.setAttribute('data-eventindex', event_index);
     outer_div.setAttribute('class', 'event ' + event.cls);
     outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
     outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
@@ -264,7 +265,7 @@ function init_data(eventData)
     // add events
     for (var i = 0; i < eventData.length; i++)
     {
-        _EVENTS[i] = addEvent(eventData[i]);
+        _EVENTS[i] = addEvent(eventData[i], i);
     }
 
 }
