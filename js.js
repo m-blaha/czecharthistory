@@ -181,24 +181,13 @@ function getElementWidth(element)
 }
 
 
-function getPosition(element) {
-    var yPosition = 0;
-
-    while(element) {
-        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-        element = element.offsetParent;
-    }
-
-    return yPosition;
-}
-
 function relative_scroll(parent) {
     var ep=$(parent);
     var ei=$('.inner', ep);
 
     var ST=$(window).scrollTop();
     var Sh=$(window).height();
-    var PT=getPosition(parent);
+    var PT=ep.offset().top;
     var Ph=ep.height();
     var Eh=ei.height();
 
