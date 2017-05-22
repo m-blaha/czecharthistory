@@ -4,7 +4,7 @@ p, h1 {
 
 
 .timeLineContainer{
-	width: 100%;
+	width: 1400px;
 	height: 100%;
 	margin: 0 auto;
 	background: #FFFFFF;
@@ -13,7 +13,7 @@ p, h1 {
 
 
 .timeLine{
-	width: 10%;
+	width: 100px;
 	height: 100%;
 	float: left;
 	background: #BEFFBD;
@@ -29,7 +29,7 @@ p, h1 {
 
 
 .eventContainer{
-	width: 90%;
+	width: 1300px;
 	height: 100%;
 	float: left;
 	position:relative;
