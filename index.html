@@ -11,6 +11,31 @@
 	<link rel="stylesheet" href="featherlight.min.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
 
+    <script type="text/html" id="popup_tmpl">
+        <div class="popup">
+            <h2><%= name %></h2>
+              <% if (typeof(image) !== 'undefined') { %>
+                  <div class="image"><img src="img/<%= image %>" alt="" /></div>
+              <% } %>
+              <% if (typeof(description) !== 'undefined') { %>
+                  <div class="description"><%= description %></div>
+              <% } %>
+        </div>
+    </script>
+
+    <script type="text/html" id="event_tmpl">
+        <div class="inner">
+            <div class="year"><%= years %></div>
+            <% if (typeof(image) !== 'undefined') { %>
+                <div class="image"><img src="img/<%= image %>" alt="" /></div>
+            <% } %>
+            <div class="name"><%= name %></div>
+            <% if (typeof(description) !== 'undefined') { %>
+                <div class="description"><%= description %></div>
+            <% } %>
+        </div>
+    </script>
+
     <script type="text/javascript">
         var TIME_START = "01/01/1940";
         var TIME_END = "01/01/2017";
@@ -27,30 +52,9 @@
         var _lastScrollPosition;
 
 
-        var popup_tmpl = _.template([
-              "<div class='popup'>",
-              "  <h2><%= name %></h2>",
-                "    <% if (typeof(image) !== 'undefined') { %>",
-                "        <div class='image'><img src='img/<%= image %>' alt='' /></div>",
-                "    <% } %>",
-                "    <% if (typeof(description) !== 'undefined') { %>",
-                "        <div class='description'><%= description %></div>",
-                "    <% } %>",
-              "</div>"
-            ].join("\n"));
+        var popup_tmpl = _.template($("#popup_tmpl").html());
+        var event_tmpl = _.template($("#event_tmpl").html());
 
-        var event_tmpl = _.template([
-                "<div class='inner'>",
-                "    <div class='year'><%= years %></div>",
-                "    <% if (typeof(image) !== 'undefined') { %>",
-                "        <div class='image'><img src='img/<%= image %>' alt='' /></div>",
-                "    <% } %>",
-                "    <div class='name'><%= name %></div>",
-                "    <% if (typeof(description) !== 'undefined') { %>",
-                "        <div class='description'><%= description %></div>",
-                "    <% } %>",
-                "</div>"
-            ].join("\n"));
 
         $(document).ready(function() {
             init_timeline();
