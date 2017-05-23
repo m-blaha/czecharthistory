@@ -37,32 +37,13 @@
     </script>
 
     <script type="text/javascript">
-        var audioElement;
         var TIME_START = "01/01/1940";
         var TIME_END = "01/01/2017";
         var DAY_PIXEL_LENGTH = 1.0;
-        var EVENT_WIDTH = 200;
-
-        var popup_tmpl = _.template($("#popup_tmpl").html());
-        var event_tmpl = _.template($("#event_tmpl").html());
-
-        function init_music() {
-            audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', 'kytice_lzi_04.mp3');
-            audioElement.setAttribute('autoplay', 'autoplay');
-            audioElement.addEventListener('ended', function() {
-                this.play();
-            }, false);
-            $(".audio-play").text($(".audio-play").data('pause'));
-        }
 
 
         $(document).ready(function() {
-            init_timeline();
-            init_data(EVENTS);
-            init_music();
-            scroll();
-            $(window).scroll(scroll);
+            init(EVENTS);
 
             $('input.classfilter').change(function() {
                 $('.event.' + $(this).val()).toggle();

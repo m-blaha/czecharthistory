@@ -1,8 +1,8 @@
 var _timeline;
-var _containerWidth;
-var _timelineWidth;
 var _EVENTS;
-var _lastScrollPosition;
+var popup_tmpl;
+var event_tmpl;
+var audioElement;
 
 
 function TimeLine(startDate, endDate)
@@ -71,7 +71,7 @@ function addEvent(event, event_index)
     outer_div.setAttribute('class', 'event ' + event.cls);
     outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
     outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
-    outer_div.style.marginLeft = (event.opt_c*EVENT_WIDTH + randomInteger(0,100)) + "px";
+    outer_div.style.marginLeft = (event.opt_c*200 + _.random(0,100)) + "px";
     outer_div.innerHTML = div;
 
     var container = document.getElementById("divEventContainer");
@@ -89,7 +89,6 @@ function addYear(year)
 		div.setAttribute('class', 'timeLineYear');
 
 		div.style.top = _timeline.getDateDistance(new Date(year, 0, 1)) * DAY_PIXEL_LENGTH + "px";
-		div.style.width = _timelineWidth + "px";
 
 		var container = document.getElementById("divTimeLine");
 
@@ -98,97 +97,7 @@ function addYear(year)
 
 
 
-function randomBool()
-{
-	var result = false;
-
-	if (Math.random() > 0.5)
-	{
-		result = true;
-	}
-
-	return result;
-}
-
-
-function randomFloat(min, max)
-{
-	var result = min;
-
-	if (max > min)
-	{
-		var difference = (max) - min;
-		difference = Math.random() * difference;
-
-		result = min + difference;
-
-		if (result > max)
-		{
-			result = max;
-		}
-	}
-
-	return result;
-}
-
-
-function randomInteger(min, max)
-{
-	var result = min;
-
-	if (max > min)
-	{
-		var difference = (max + 1) - min;
-		difference = Math.random() * difference;
-		difference = Math.floor(difference);
-
-		result = min + difference;
-
-		if (result > max)
-		{
-			result = max;
-		}
-	}
-
-	return result;
-}
-
-
-// http://stackoverflow.com/questions/1484506/random-color-generator-in-javascript
-function getRandomColor()
-{
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.round(Math.random() * 15)];
-    }
-    return color;
-}
-
-
-
-
-function getElementWidth(element)
-{
-	if (typeof element.clip !== "undefined")
-	{
-		return element.clip.width;
-	}
-	else
-	{
-		if (element.style.pixelWidth)
-		{
-			return element.style.pixelWidth;
-		}
-		else
-		{
-			return element.offsetWidth;
-		}
-	}
-}
-
-
-function do_scroll(parent) {
+function scroll_event(parent) {
     var ep=$(parent);
     var ei=$('.inner', ep);
 
@@ -215,10 +124,7 @@ function do_scroll(parent) {
 }
 
 function scroll(e) {
-    for (var i = 0; i < _EVENTS.length; i++) {
-        var parent=_EVENTS[i];
-        do_scroll(parent);
-    }
+    _.each(_EVENTS, scroll_event);
 }
 
 
@@ -235,12 +141,8 @@ function init_timeline()
 		_timeline = new TimeLine(timeline_start, timeline_end);
 		var length = _timeline.getLength();
 
-		var timeline_container = document.getElementById("divTimeLine");
-		_timelineWidth = getElementWidth(timeline_container);
-
 		// resize container
 		var container = document.getElementById("divTimeLineContainer");
-
 		container.style.height = length * DAY_PIXEL_LENGTH + "px";
 
 		// add timeline... lines
@@ -258,13 +160,30 @@ function init_timeline()
 
 function init_data(eventData)
 {
-    _EVENTS = new Array();
-    // add events
-    for (var i = 0; i < eventData.length; i++)
-    {
-        _EVENTS[i] = addEvent(eventData[i], i);
-    }
-
+    _EVENTS = _.map(eventData, addEvent);
 }
 
+
+function init_music()
+{
+    audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'kytice_lzi_04.mp3');
+    audioElement.setAttribute('autoplay', 'autoplay');
+    audioElement.addEventListener('ended', function() {
+        this.play();
+    }, false);
+    $(".audio-play").text($(".audio-play").data('pause'));
+}
+
+
+function init(events)
+{
+    popup_tmpl = _.template($("#popup_tmpl").html());
+    event_tmpl = _.template($("#event_tmpl").html());
+    init_timeline();
+    init_data(events);
+    init_music();
+    scroll();
+    $(window).scroll(scroll);
+}
 
