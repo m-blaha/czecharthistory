@@ -1,3 +1,10 @@
+var _timeline;
+var _containerWidth;
+var _timelineWidth;
+var _EVENTS;
+var _lastScrollPosition;
+
+
 function TimeLine(startDate, endDate)
 {
 	var _startDate = startDate
@@ -195,9 +202,9 @@ function do_scroll(parent) {
     var progress = 0;
 
     if (ST < PT-Sh) {
-        scroll = Sh+100;
+        scroll = Sh+1000;
     } else if (ST > PT+Ph) {
-        scroll = ST - Eh - 100;
+        scroll = ST - Eh - 1000;
     } else {
         progress = (ST-(PT-Sh))/(Ph+Sh);
         scroll = Math.round((Ph-Eh)*progress);

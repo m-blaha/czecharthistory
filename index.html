@@ -37,17 +37,11 @@
     </script>
 
     <script type="text/javascript">
+        var audioElement;
         var TIME_START = "01/01/1940";
         var TIME_END = "01/01/2017";
         var DAY_PIXEL_LENGTH = 1.0;
         var EVENT_WIDTH = 200;
-
-        var _timeline;
-        var _containerWidth;
-        var _timelineWidth;
-        var _EVENTS;
-        var _lastScrollPosition;
-
 
         var popup_tmpl = _.template($("#popup_tmpl").html());
         var event_tmpl = _.template($("#event_tmpl").html());
@@ -67,8 +61,24 @@
             $('.event .inner').click(function() {
                 $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {});
             });
-        });
 
+            audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'kytice_lzi_04.mp3');
+            audioElement.setAttribute('autoplay', 'autoplay');
+            audioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+            $('.audio-play').click(function() {
+                if (audioElement.paused) {
+                    audioElement.play();
+                    $(this).html = $(this).text('pause');
+                } else {
+                    audioElement.pause();
+                    $(this).html = $(this).text('play');
+                };
+                return false;
+            });
+        });
 
     </script>
 </head>
@@ -86,6 +96,9 @@
                 <input type="checkbox" value="art" checked="checked" class="classfilter"/> art
                 <input type="checkbox" value="culture" checked="checked" class="classfilter"/> culture
                 <input type="checkbox" value="sciencetechnology" checked="checked" class="classfilter"/> technology
+            </div>
+            <div>
+                <button class="audio-play" data-play="Play" data-pause="Pause">pause</button>
             </div>
         </form>
 
