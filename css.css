@@ -45,6 +45,7 @@ p, h1 {
 
 .event .inner {
     overflow: hidden;
+    position: fixed;
     pointer-events:auto;
 }
 

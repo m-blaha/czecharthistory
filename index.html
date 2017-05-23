@@ -57,7 +57,7 @@
             init_timeline();
             init_data(EVENTS);
             scroll();
-            $(window).scroll(function() {scroll();});
+            $(window).scroll(scroll);
 
             $('input.classfilter').change(function() {
                 $('.event.' + $(this).val()).toggle();

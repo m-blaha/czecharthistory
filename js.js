@@ -181,7 +181,7 @@ function getElementWidth(element)
 }
 
 
-function relative_scroll(parent) {
+function do_scroll(parent) {
     var ep=$(parent);
     var ei=$('.inner', ep);
 
@@ -195,21 +195,22 @@ function relative_scroll(parent) {
     var progress = 0;
 
     if (ST < PT-Sh) {
-        scroll = 0;
+        scroll = Sh+100;
     } else if (ST > PT+Ph) {
-        scroll = Ph - Eh;
+        scroll = ST - Eh - 100;
     } else {
         progress = (ST-(PT-Sh))/(Ph+Sh);
         scroll = Math.round((Ph-Eh)*progress);
+        scroll = scroll - (ST-PT);
     }
 
-    ei.css("margin-top", scroll + "px");
+    ei.css("top", scroll + "px");
 }
 
-function scroll() {
+function scroll(e) {
     for (var i = 0; i < _EVENTS.length; i++) {
         var parent=_EVENTS[i];
-        relative_scroll(parent);
+        do_scroll(parent);
     }
 }
 
