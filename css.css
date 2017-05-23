@@ -1,5 +1,11 @@
-p, h1 {
-	font-family: Arial, Helvetica, sans-serif
+
+.filters {
+    position: fixed;
+    top: 0;
+    right:0;
+    width: 200px;
+    pointer-events:auto;
+    z-index: 100;
 }
 
 
@@ -37,13 +43,13 @@ p, h1 {
 }
 
 .event{
-	width: 200px;
 	position:absolute;
     pointer-events: none;
 }
 
 
 .event .inner {
+	width: 200px;
     overflow: hidden;
     position: fixed;
     pointer-events:auto;
