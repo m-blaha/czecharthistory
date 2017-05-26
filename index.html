@@ -54,6 +54,13 @@
                 $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {});
             });
 
+            $('.event .inner').hover(
+                function() {
+                    $('.event .inner').css('z-index', 1);
+                    $(this).css('z-index', 10);
+                    }
+            );
+
             $('.audio-play').click(function() {
                 var b=$(this);
                 if (audioElement.paused) {
