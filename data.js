@@ -5,9 +5,18 @@ var EVENTS=[
     "description": "", 
     "name": "Cold War", 
     "opt_c": 2, 
-    "image": "events/Cold_War.jpg", 
+    "image": "events/Cold_War.gif", 
     "cls": "events politics world"
   }, 
+  {
+    "start": "01/01/1961", 
+    "end": "31/01/1989", 
+    "description": "", 
+    "name": "Berlin is divided", 
+    "opt_c": 3, 
+    "image": "events/Berlin_is_Divided2.jpg", 
+    "cls": "events politics world"
+  },
   {
     "start": "01/01/1968", 
     "end": "31/01/1989", 
@@ -58,7 +67,7 @@ var EVENTS=[
     "end": "31/01/1981", 
     "description": "", 
     "name": "Lesser Town courts exhibition", 
-    "opt_c": 4, 
+    "opt_c": 1, 
     "image": "events/Lesser_Town_courts_exhibition.jpg", 
     "cls": "events culture czech"
   }, 
@@ -71,15 +80,15 @@ var EVENTS=[
     "image": "events/Personal_Computers_introduced_by_IBM.jpg", 
     "cls": "events sciencetechnology world"
   }, 
-  {
+  /*{
     "start": "01/01/1981", 
     "end": "31/01/1981", 
     "description": "", 
     "name": "Jean-Michel Basquiat", 
-    "opt_c": 1, 
-    "image": "events/Jean-Michel_Basquiat.jpg", 
+    "opt_c": 2, 
+    "image": "events/Jean-Michel_Basquiat.gif", 
     "cls": "events art world"
-  }, 
+  }, */
   {
     "start": "01/01/1982", 
     "end": "31/01/1982", 
@@ -94,7 +103,7 @@ var EVENTS=[
     "end": "31/01/1982", 
     "description": "", 
     "name": "Keith Haring", 
-    "opt_c": 3, 
+    "opt_c": 2, 
     "image": "events/Keith_Haring.jpg", 
     "cls": "events art world"
   }, 
@@ -113,16 +122,7 @@ var EVENTS=[
     "description": "", 
     "name": "Michael Jackson Releases Thriller", 
     "opt_c": 0, 
-    "image": "events/Michael_Jackson_Releases_Thriller.jpg", 
-    "cls": "events culture world"
-  }, 
-  {
-    "start": "01/01/1980", 
-    "end": "31/01/1989", 
-    "description": "", 
-    "name": "80s hairstyles", 
-    "opt_c": 4, 
-    "image": "events/80s_hairstyles.jpg", 
+    "image": "events/Michael_Jackson_Releases_Thriller.gif", 
     "cls": "events culture world"
   }, 
   {
@@ -130,7 +130,7 @@ var EVENTS=[
     "end": "31/01/1983", 
     "description": "", 
     "name": "National Theater and New Scene is reopened", 
-    "opt_c": 1, 
+    "opt_c": 4, 
     "image": "events/National_Theater_and_New_Scene_is_reopened.jpg", 
     "cls": "events culture czech"
   }, 
@@ -140,7 +140,7 @@ var EVENTS=[
     "description": "", 
     "name": "Milo\u0161 Forman wins Oscar", 
     "opt_c": 3, 
-    "image": "events/Milos_Forman_wins_Oscar.jpg", 
+    "image": "events/Milos_Forman_wins_Oscar.gif", 
     "cls": "events culture czech"
   }, 
   {
@@ -167,10 +167,10 @@ var EVENTS=[
     "description": "", 
     "name": "Mikhail Gorbachev is leader of the Soviet Union", 
     "opt_c": 4, 
-    "image": "events/Mikhail_Gorbachev_is_leader_of_the_Soviet_Union.jpg", 
+    "image": "events/Mikhail_Gorbachev_is_leader_of_the_Soviet_Union3.jpg", 
     "cls": "events politics world"
   }, 
-  {
+  /*{
     "start": "01/01/1985", 
     "end": "31/01/1985", 
     "description": "", 
@@ -178,7 +178,7 @@ var EVENTS=[
     "opt_c": 0, 
     "image": "events/Hole_in_the_Ozone_Layer_Discovered.jpg", 
     "cls": "events sciencetechnology world"
-  }, 
+  }, */
   {
     "start": "01/01/1986", 
     "end": "31/01/1986", 
@@ -219,7 +219,7 @@ var EVENTS=[
     "start": "01/01/1988", 
     "end": "31/01/1988", 
     "description": "", 
-    "name": "Jeff Koons \u2013 Michael Jackson and Bubbles ", 
+    "name": "Jeff Koons \u2013 Michael Jackson and Bubbles X", 
     "opt_c": 3, 
     "image": "events/Jeff_Koons_Michael_Jackson_and_Bubbles.jpg", 
     "cls": "events art world"
@@ -238,7 +238,7 @@ var EVENTS=[
     "end": "31/01/1989", 
     "description": "", 
     "name": "World Wide Web Invented", 
-    "opt_c": 1, 
+    "opt_c": 0, 
     "image": "events/World_Wide_Web_Invented.jpg", 
     "cls": "events sciencetechnology world"
   }, 
@@ -248,7 +248,7 @@ var EVENTS=[
     "description": "", 
     "name": "Berlin Wall Falls", 
     "opt_c": 5, 
-    "image": "events/Berlin_Wall_Falls.jpg", 
+    "image": "events/Berlin_Wall_Falls-09.jpg", 
     "cls": "events politics world"
   }, 
   {
@@ -257,7 +257,7 @@ var EVENTS=[
     "description": "", 
     "name": "Velvet Revolution", 
     "opt_c": 2, 
-    "image": "events/Velvet_Revolution.jpg", 
+    "image": "events/Velvet_Revolution.gif", 
     "cls": "events politics czech"
   }, 
   {
@@ -266,7 +266,7 @@ var EVENTS=[
     "description": "", 
     "name": "Gottwaldow renamed back to Zlin", 
     "opt_c": 3, 
-    "image": "", 
+    "image": "events/Gottwaldow_renamed_back_to_Zlin.jpg", 
     "cls": "events politics czech"
   }, 
   {
@@ -275,7 +275,7 @@ var EVENTS=[
     "description": "", 
     "name": "Jan Chalupeck\u00fd prize established", 
     "opt_c": 0, 
-    "image": "", 
+    "image": "events/Vysegrad_fund_is_asigned.jpg", 
     "cls": "events culture czech"
   }, 
   {
@@ -291,9 +291,9 @@ var EVENTS=[
     "start": "01/01/1991", 
     "end": "31/01/1991", 
     "description": "", 
-    "name": "Vysegrad fund signment ?", 
+    "name": "Vysegrad fund assigned", 
     "opt_c": 0, 
-    "image": "", 
+    "image": "events/Vysegrad_fund_is_asigned.jpg", 
     "cls": "events politics czech"
   }, 
   {
@@ -302,7 +302,7 @@ var EVENTS=[
     "description": "", 
     "name": "1st internet connection", 
     "opt_c": 5, 
-    "image": "", 
+    "image": "events/1st_internet_connection.jpg", 
     "cls": "events sciencetechnology czech"
   }, 
   {
@@ -311,7 +311,7 @@ var EVENTS=[
     "description": "", 
     "name": "1st McDonald restaurant", 
     "opt_c": 3, 
-    "image": "", 
+    "image": "events/1st_McDonald_restaurant.jpg", 
     "cls": "events culture czech"
   }, 
   {
@@ -329,7 +329,7 @@ var EVENTS=[
     "description": "", 
     "name": "1st private TV station", 
     "opt_c": 0, 
-    "image": "", 
+    "image": "events/1st_private_TV_station.jpg", 
     "cls": "events culture czech"
   }, 
   {

@@ -37,7 +37,7 @@
     </script>
 
     <script type="text/javascript">
-        var TIME_START = "01/01/1940";
+        var TIME_START = "01/01/1970";
         var TIME_END = "01/01/2017";
         var DAY_PIXEL_LENGTH = 1.0;
 
@@ -71,30 +71,42 @@
 </head>
 
 <body>
+    <div id="gradient_container"><div id="gradient"></div></div>
     <div class="info">
-        <h1>Czech art history</h1>
+        <div class="menuSidePanel">
+            <ul>                
+                <li><img src="img/sound_icon-07.svg"</li>
+                <li><img src="img/index_icon-03.svg"</li>
+                <li class="periodName">Last&nbsp;Decade&nbsp;of&nbsp;the&nbsp;Regime</li>
+                <li class="periodSpan" style="float:right">80-89</li>
+            </ul>
+        </div>
         <form class="filters">
-            <div>
+            <!--<div>
                 <input type="checkbox" value="world" checked="checked" class="classfilter"/> world
                 <input type="checkbox" value="czech" checked="checked" class="classfilter"/> czech
-            </div>
+            </div>-->
             <div>
-                <input type="checkbox" value="politics" checked="checked" class="classfilter"/> politics
-                <input type="checkbox" value="art" checked="checked" class="classfilter"/> art
-                <input type="checkbox" value="culture" checked="checked" class="classfilter"/> culture
-                <input type="checkbox" value="sciencetechnology" checked="checked" class="classfilter"/> technology
-            </div>
-            <div>
-                <button class="audio-play" data-play="Play" data-pause="Pause" />
+                <input type="checkbox" value="politics" checked="checked" class="classfilter"/><label class="strikethrough">Politics</label>
+                <!--<input type="checkbox" value="art" checked="checked" class="classfilter"/> art-->
+                <input type="checkbox" value="culture" checked="checked" class="classfilter"/><label class="strikethrough">Culture</label>
+                <input type="checkbox" value="sciencetechnology" checked="checked" class="classfilter"/><label class="strikethrough">Technology</label>
             </div>
         </form>
+        <div class="navigationSidePanel">
+            <ul>
+                <li>Period</li>
+                <li class="underline">Timeline</li>
+                <li>Artworks</li>
+            </ul>
+        </div>
 
     </div>
 
     <div id="divTimeLineContainer" class="timeLineContainer">
-        <div id="divTimeLine" class="timeLine">
-        </div>
         <div id="divEventContainer" class="eventContainer">
+        </div>
+        <div id="divTimeLine" class="timeLine">
         </div>
     </div>
 </body>

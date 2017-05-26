@@ -7,7 +7,7 @@ var audioElement;
 
 function TimeLine(startDate, endDate)
 {
-	var _startDate = startDate
+	var _startDate = startDate;
 	var _endDate = endDate;
 
 	this.getLength = function(endDate)
@@ -23,6 +23,11 @@ function TimeLine(startDate, endDate)
 	this.endDate = function()
 	{
 		return _endDate;
+	}
+
+	this.startDate = function()
+	{
+		return _startDate;
 	}
 
 
@@ -60,6 +65,10 @@ function addEvent(event, event_index)
 {
     var d_start=parseDate(event.start);
     var d_end=parseDate(event.end);
+
+    if (d_end<_timeline.startDate()) {
+        return document.createElement('div');
+    };
 
     event.years=d_start.getFullYear();
     if (d_end.getFullYear() != d_start.getFullYear())
