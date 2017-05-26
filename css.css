@@ -108,11 +108,11 @@ p, h1 {
 	margin-left: 60px;
 	margin-top: 10px;
 }
-input[type=checkbox]:checked + label.strikethrough{
-  text-decoration: line-through;
+.classfilter {
+    cursor: pointer;
 }
-input[type=checkbox] {
-   opacity: 0;
+.strikethrough{
+  text-decoration: line-through;
 }
 
 

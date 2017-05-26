@@ -45,9 +45,17 @@
         $(document).ready(function() {
             init(EVENTS);
 
-            $('input.classfilter').change(function() {
-                $('.event.' + $(this).val()).toggle();
-                scroll();
+            $('.classfilter').click(function(event){
+                event.preventDefault();
+                var t=$(this);
+                if (t.hasClass('strikethrough')) {
+                    $('.event.' + $(this).data('value')).show();
+                    scroll();
+                    t.removeClass('strikethrough');
+                } else {
+                    $('.event.' + $(this).data('value')).hide();
+                    t.addClass('strikethrough');
+                }
             });
 
             $('.event .inner').click(function() {
@@ -91,15 +99,10 @@
             </ul>
         </div>
         <form class="filters">
-            <!--<div>
-                <input type="checkbox" value="world" checked="checked" class="classfilter"/> world
-                <input type="checkbox" value="czech" checked="checked" class="classfilter"/> czech
-            </div>-->
             <div>
-                <input type="checkbox" value="politics" checked="checked" class="classfilter"/><label class="strikethrough">Politics</label>
-                <!--<input type="checkbox" value="art" checked="checked" class="classfilter"/> art-->
-                <input type="checkbox" value="culture" checked="checked" class="classfilter"/><label class="strikethrough">Culture</label>
-                <input type="checkbox" value="sciencetechnology" checked="checked" class="classfilter"/><label class="strikethrough">Technology</label>
+                <span href="#" data-value="politics" class="classfilter">Politics</span>
+                <span href="#" data-value="culture" class="classfilter">Culture</span>
+                <span href="#" data-value="technology" class="classfilter">Technology</span>
             </div>
         </form>
         <div class="navigationSidePanel">
