@@ -162,6 +162,7 @@ p, h1 {
     overflow: hidden;
     position: fixed;
     pointer-events:auto;
+    transition: all 2s ease-out;
 }
 
 .event .inner img {
@@ -207,25 +208,6 @@ p, h1 {
 }
 */
 
-
-.event.col-1 {
-    margin-left: 0px;
-}
-.event.col-2 {
-    margin-left: 200px;
-}
-.event.col-3 {
-    margin-left: 400px;
-}
-.event.col-4 {
-    margin-left: 600px;
-}
-.event.col-5 {
-    margin-left: 800px;
-}
-.event.col-6 {
-    margin-left: 1000px;
-}
 
 #gradient_container {
 	position: relative;

@@ -49,11 +49,11 @@
                 event.preventDefault();
                 var t=$(this);
                 if (t.hasClass('strikethrough')) {
-                    $('.event.' + $(this).data('value')).show();
+                    $('.event.' + $(this).data('value')).css('visibility', 'visible');
                     scroll();
                     t.removeClass('strikethrough');
                 } else {
-                    $('.event.' + $(this).data('value')).hide();
+                    $('.event.' + $(this).data('value')).css('visibility', 'hidden');
                     t.addClass('strikethrough');
                 }
             });

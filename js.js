@@ -80,7 +80,7 @@ function addEvent(event, event_index)
     outer_div.setAttribute('class', 'event ' + event.cls);
     outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
     outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
-    outer_div.style.marginLeft = (event.opt_c*200 + _.random(0,100)) + "px";
+    outer_div.style.marginLeft = (5 + (event.opt_c)*14 + _.random(0,10)) + "%";
     outer_div.innerHTML = div;
 
     var container = document.getElementById("divEventContainer");
@@ -93,7 +93,7 @@ function addEvent(event, event_index)
 function addYear(year)
 	{
 		var div = document.createElement('div');
-		div.innerHTML = "<p><center><b>" + year + "</b></center></p>";
+		div.innerHTML = "<p><center><b>" + (year.toString().substr(2,4)) + "</b></center></p>";
 
 		div.setAttribute('class', 'timeLineYear');
 
@@ -120,9 +120,9 @@ function scroll_event(parent) {
     var progress = 0;
 
     if (ST < PT-Sh) {
-        scroll = Sh+1000;
+        scroll = Sh+100;
     } else if (ST > PT+Ph) {
-        scroll = ST - Eh - 1000;
+        scroll = -1 * Eh - 100;
     } else {
         progress = (ST-(PT-Sh))/(Ph+Sh);
         scroll = Math.round((Ph-Eh)*progress);
