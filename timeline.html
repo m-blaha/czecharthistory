@@ -37,13 +37,14 @@
     </script>
 
     <script type="text/javascript">
+        /*default, pokud v URL parametru neni rozumny start spanu */
         var TIME_START = 1970;
         var TIME_END = 2017;
         var DAY_PIXEL_LENGTH = 1.0;
 
 
         $(document).ready(function() {
-            init(EVENTS, TIME_START, TIME_END);
+            init(EVENTS, TIME_START, TIME_END, DAY_PIXEL_LENGTH);
 
             $('.classfilter').click(function(event){
                 event.preventDefault();
@@ -95,7 +96,7 @@
                 <li><img src="img/sound_icon-07.svg" class="audio-play" data-play="Play" data-pause="Pause" /></li>
                 <li><img src="img/index_icon-03.svg" /></li>
                 <li class="periodName">Last&nbsp;Decade&nbsp;of&nbsp;the&nbsp;Regime</li>
-                <li class="periodSpan" style="float:right">80-89</li>
+                <li class="periodSpan" style="float:right"><a href="index.html">80-89</a></li>
             </ul>
         </div>
         <form class="filters">

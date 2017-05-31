@@ -1,3 +1,18 @@
+var SPANS=[
+    {
+     "start": 1918,
+     "end": 1930,
+     "day_pixel_length": 1.0,
+     "title": "nazev obdobi"
+    },
+    {
+     "start": 1980,
+     "end": 1989,
+     "day_pixel_length": 1.0,
+     "title": "Last&nbsp;Decade&nbsp;of&nbsp;the&nbsp;Regime"
+    }
+];
+
 var EVENTS=[
   {
     "start": "01/01/1947", 

@@ -5,10 +5,11 @@ var event_tmpl;
 var audioElement;
 
 
-function TimeLine(startDate, endDate)
+function TimeLine(startDate, endDate, dpl)
 {
 	var _startDate = startDate;
 	var _endDate = endDate;
+    var _dayPixelLength = dpl;
 
 	this.getLength = function(endDate)
 	{
@@ -28,6 +29,11 @@ function TimeLine(startDate, endDate)
 	this.startDate = function()
 	{
 		return _startDate;
+	}
+
+	this.dayPixelLength = function()
+	{
+		return _dayPixelLength;
 	}
 
 
@@ -69,6 +75,9 @@ function addEvent(event, event_index)
     if (d_end<_timeline.startDate()) {
         return document.createElement('div');
     };
+    if (d_start>_timeline.endDate()) {
+        return document.createElement('div');
+    };
 
     event.years=d_start.getFullYear();
     if (d_end.getFullYear() != d_start.getFullYear())
@@ -78,8 +87,8 @@ function addEvent(event, event_index)
     var outer_div = document.createElement('div');
     outer_div.setAttribute('data-eventindex', event_index);
     outer_div.setAttribute('class', 'event ' + event.cls);
-    outer_div.style.top = _timeline.getDateDistance(d_start) * DAY_PIXEL_LENGTH + "px";
-    outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * DAY_PIXEL_LENGTH + "px";
+    outer_div.style.top = _timeline.getDateDistance(d_start) * _timeline.dayPixelLength() + "px";
+    outer_div.style.height = (_timeline.getDateDistance(d_end) - _timeline.getDateDistance(d_start)) * _timeline.dayPixelLength() + "px";
     outer_div.style.marginLeft = (5 + (event.opt_c)*14 + _.random(0,10)) + "%";
     outer_div.innerHTML = div;
 
@@ -89,15 +98,18 @@ function addEvent(event, event_index)
     return outer_div;
 }
 
+function shortYear(year) {
+    return year.toString().substr(2,4);
+}
 
 function addYear(year)
 	{
 		var div = document.createElement('div');
-		div.innerHTML = "<p><center><b>" + (year.toString().substr(2,4)) + "</b></center></p>";
+		div.innerHTML = "<p><center><b>" + (shortYear(year)) + "</b></center></p>";
 
 		div.setAttribute('class', 'timeLineYear');
 
-		div.style.top = _timeline.getDateDistance(new Date(year, 0, 1)) * DAY_PIXEL_LENGTH + "px";
+		div.style.top = _timeline.getDateDistance(new Date(year, 0, 1)) * _timeline.dayPixelLength() + "px";
 
 		var container = document.getElementById("divTimeLine");
 
@@ -137,7 +149,7 @@ function scroll_event(parent) {
 }
 
 function set_year() {
-    var days = ($(window).scrollTop() - $('#divTimeLine').offset().top) / DAY_PIXEL_LENGTH;
+    var days = ($(window).scrollTop() - $('#divTimeLine').offset().top) / _timeline.dayPixelLength();
     var year = _timeline.startDate().getFullYear() + Math.floor(days / 365);
     $('#year').text(year);
 }
@@ -156,17 +168,27 @@ function parse_params() {
 
 
 
-function init_timeline(start, end)
+function init_timeline(start, end, day_pixel_length)
 	{
-        var timeline_start = new Date(start, 0, 1);
-        var timeline_end = new Date(end, 0, 1);
+        var span = _.findWhere(SPANS, {start: parseInt(parse_params().start)});
 
-		_timeline = new TimeLine(timeline_start, timeline_end);
+        if (_.isUndefined(span)) {
+            var timeline_start = new Date(start, 0, 1);
+            var timeline_end = new Date(end, 0, 1);
+        } else {
+            var timeline_start = new Date(span.start, 0, 1);
+            var timeline_end = new Date(span.end, 0, 1);
+            $('.periodName').html(span.title);
+            day_pixel_length = span.day_pixel_length;
+        }
+        $('.periodSpan a').text(shortYear(timeline_start.getFullYear()) + '-' + shortYear(timeline_end.getFullYear()));
+
+		_timeline = new TimeLine(timeline_start, timeline_end, day_pixel_length);
 		var length = _timeline.getLength();
 
 		// resize container
 		var container = document.getElementById("divTimeLineContainer");
-		container.style.height = length * DAY_PIXEL_LENGTH + "px";
+		container.style.height = length * _timeline.dayPixelLength() + "px";
 
 		/*/ add timeline... lines
 		var timeline_line = new Date(timeline_start.getYear(), 0, 1);
@@ -200,11 +222,11 @@ function init_music()
 }
 
 
-function init(events, start, end)
+function init(events, start, end, day_pixel_length)
 {
     popup_tmpl = _.template($("#popup_tmpl").html());
     event_tmpl = _.template($("#event_tmpl").html());
-    init_timeline(start, end);
+    init_timeline(start, end, day_pixel_length);
     init_data(events);
     init_music();
     scroll();
