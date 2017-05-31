@@ -140,16 +140,19 @@ function scroll(e) {
     _.each(_EVENTS, scroll_event);
 }
 
+function parse_params() {
+    return _.object(_.compact(_.map(location.search.slice(1).split('&'), function(item) {  if (item) return item.split('='); })));
+}
 
 
 
 
 
 
-function init_timeline()
+function init_timeline(start, end)
 	{
-		var timeline_start = parseDate(TIME_START);
-		var timeline_end = parseDate(TIME_END);
+		var timeline_start = parseDate(start);
+		var timeline_end = parseDate(end);
 
 		_timeline = new TimeLine(timeline_start, timeline_end);
 		var length = _timeline.getLength();
@@ -189,11 +192,11 @@ function init_music()
 }
 
 
-function init(events)
+function init(events, start, end)
 {
     popup_tmpl = _.template($("#popup_tmpl").html());
     event_tmpl = _.template($("#event_tmpl").html());
-    init_timeline();
+    init_timeline(start, end);
     init_data(events);
     init_music();
     scroll();

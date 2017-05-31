@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="featherlight.min.js"></script>
+	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+	<link rel="stylesheet" href="featherlight.min.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
+
+    <script type="text/html" id="popup_tmpl">
+        <div class="popup">
+            <h2><%= name %></h2>
+              <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
+                  <div class="image"><img src="img/<%= image %>" alt="" /></div>
+              <% } %>
+              <% if (typeof(description) !== 'undefined') { %>
+                  <div class="description"><%= description %></div>
+              <% } %>
+        </div>
+    </script>
+
+    <script type="text/html" id="event_tmpl">
+        <div class="inner">
+            <div class="year"><%= years %></div>
+            <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
+                <div class="image"><img src="img/<%= image %>" alt="" /></div>
+            <% } %>
+            <div class="name"><%= name %></div>
+            <% if (typeof(description) !== 'undefined') { %>
+                <div class="description"><%= description %></div>
+            <% } %>
+        </div>
+    </script>
+
+    <script type="text/javascript">
+        var TIME_START = "01/01/1970";
+        var TIME_END = "01/01/2017";
+        var DAY_PIXEL_LENGTH = 1.0;
+
+
+        $(document).ready(function() {
+            init(EVENTS, TIME_START, TIME_END);
+
+            $('.classfilter').click(function(event){
+                event.preventDefault();
+                var t=$(this);
+                if (t.hasClass('strikethrough')) {
+                    $('.event.' + $(this).data('value')).css('visibility', 'visible');
+                    scroll();
+                    t.removeClass('strikethrough');
+                } else {
+                    $('.event.' + $(this).data('value')).css('visibility', 'hidden');
+                    t.addClass('strikethrough');
+                }
+            });
+
+            $('.event .inner').click(function() {
+                $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {});
+            });
+
+            $('.event .inner').hover(
+                function() {
+                    $('.event .inner').css('z-index', 1);
+                    $(this).css('z-index', 10);
+                    },
+                function() {
+                }
+            );
+
+            $('.audio-play').click(function() {
+                var b=$(this);
+                if (audioElement.paused) {
+                    audioElement.play();
+                    b.text(b.data('pause'));
+                } else {
+                    audioElement.pause();
+                    b.text(b.data('play'));
+                };
+                return false;
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="gradient_container"><div id="gradient"></div></div>
+    <div class="info">
+        <div class="menuSidePanel">
+            <ul>
+                <li><img src="img/sound_icon-07.svg" class="audio-play" data-play="Play" data-pause="Pause" /></li>
+                <li><img src="img/index_icon-03.svg" /></li>
+                <li class="periodName">Last&nbsp;Decade&nbsp;of&nbsp;the&nbsp;Regime</li>
+                <li class="periodSpan" style="float:right">80-89</li>
+            </ul>
+        </div>
+        <form class="filters">
+            <div>
+                <span href="#" data-value="politics" class="classfilter">Politics</span>
+                <span href="#" data-value="culture" class="classfilter">Culture</span>
+                <span href="#" data-value="technology" class="classfilter">Technology</span>
+            </div>
+        </form>
+        <div class="navigationSidePanel">
+            <ul>
+                <li>Period</li>
+                <li class="underline">Timeline</li>
+                <li>Artworks</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="divTimeLineContainer" class="timeLineContainer">
+        <div id="divEventContainer" class="eventContainer">
+        </div>
+        <div id="divTimeLine" class="timeLine">
+        </div>
+    </div>
+</body>
+</html>
