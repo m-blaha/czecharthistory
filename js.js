@@ -129,7 +129,11 @@ function scroll_event(parent) {
         scroll = scroll - (ST-PT);
     }
 
-    ei.css("top", scroll + "px");
+    if (ep.hasClass('artworks')) {
+        ei.css("bottom", scroll + "px");
+    } else {
+        ei.css("top", scroll + "px");
+    }
 }
 
 function scroll(e) {
