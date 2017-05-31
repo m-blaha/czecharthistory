@@ -67,7 +67,7 @@ var EVENTS=[
     "end": "31/01/1981", 
     "description": "", 
     "name": "Lesser Town courts exhibition", 
-    "opt_c": 1, 
+    "opt_c": 0, 
     "image": "events/Lesser_Town_courts_exhibition.jpg", 
     "cls": "events culture czech"
   }, 
@@ -238,7 +238,7 @@ var EVENTS=[
     "end": "31/01/1989", 
     "description": "", 
     "name": "World Wide Web Invented", 
-    "opt_c": 0, 
+    "opt_c": 1, 
     "image": "events/World_Wide_Web_Invented.jpg", 
     "cls": "events sciencetechnology world"
   }, 
@@ -254,11 +254,11 @@ var EVENTS=[
   {
     "start": "01/01/1989", 
     "end": "31/01/1989", 
-    "description": "", 
+    "description": "The result of Velvet Revolution was the end of 41 years of one-party rule in Czechoslovakia", 
     "name": "Velvet Revolution", 
     "opt_c": 2, 
-    "image": "events/Velvet_Revolution.gif", 
-    "cls": "events politics czech"
+    "image": "events/Velvet_Revolution-02.svg", 
+    "cls": "events politics czech textual"
   }, 
   {
     "start": "01/01/1990", 
@@ -458,7 +458,7 @@ var EVENTS=[
     "image": "artworks/Naceradsky.jpg", 
     "cls": "artworks"
   }, 
-  {
+  /*{
     "start": "01/01/1989", 
     "end": "31/01/1989", 
     "description": "Anton\u00edn St\u0159\u00ed\u017eek", 
@@ -466,7 +466,7 @@ var EVENTS=[
     "opt_c": 3, 
     "image": "artworks/Strizek.jpg", 
     "cls": "artworks"
-  }, 
+  }, */
   {
     "opt_c": 3, 
     "cls": "styles", 
