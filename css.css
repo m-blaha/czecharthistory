@@ -162,7 +162,7 @@ p, h1 {
     overflow: hidden;
     position: fixed;
     pointer-events:auto;
-    transition: all 2s ease-out;
+    transition: all 2s ease-out, visibility 1ms;
 }
 
 .event .inner img {
