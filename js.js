@@ -136,7 +136,14 @@ function scroll_event(parent) {
     }
 }
 
+function set_year() {
+    var days = ($(window).scrollTop() - $('#divTimeLine').offset().top) / DAY_PIXEL_LENGTH;
+    var year = _timeline.startDate().getFullYear() + Math.floor(days / 365);
+    $('#year').text(year);
+}
+
 function scroll(e) {
+    set_year();
     _.each(_EVENTS, scroll_event);
 }
 
@@ -151,8 +158,8 @@ function parse_params() {
 
 function init_timeline(start, end)
 	{
-		var timeline_start = parseDate(start);
-		var timeline_end = parseDate(end);
+        var timeline_start = new Date(start, 0, 1);
+        var timeline_end = new Date(end, 0, 1);
 
 		_timeline = new TimeLine(timeline_start, timeline_end);
 		var length = _timeline.getLength();
@@ -161,7 +168,7 @@ function init_timeline(start, end)
 		var container = document.getElementById("divTimeLineContainer");
 		container.style.height = length * DAY_PIXEL_LENGTH + "px";
 
-		// add timeline... lines
+		/*/ add timeline... lines
 		var timeline_line = new Date(timeline_start.getYear(), 0, 1);
 
 		while(timeline_line.getFullYear() <= _timeline.endDate().getFullYear())
@@ -169,6 +176,7 @@ function init_timeline(start, end)
 			addYear(timeline_line.getFullYear())
 			timeline_line.setFullYear(timeline_line.getFullYear() + 1);
 		}
+        */
 
 	}
 
