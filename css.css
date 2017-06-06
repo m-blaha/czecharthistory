@@ -292,6 +292,11 @@ a {
     background-color: #c3ac8b;
     opacity: 0.2;
 }*/
+
+#gridlines {
+    pointer-events: none;
+}
+
 #gridlines img {
 	position:fixed;
 	width: 100%;
