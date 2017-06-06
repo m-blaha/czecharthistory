@@ -164,6 +164,9 @@ function parse_params() {
 }
 
 
+function resize(e) {
+    $(".eventspadding").height($(window).height());
+}
 
 
 
@@ -230,6 +233,6 @@ function init(events, start, end, day_pixel_length)
     init_data(events);
     init_music();
     scroll();
-    $(window).scroll(scroll);
+    resize();
 }
 

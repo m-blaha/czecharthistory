@@ -280,9 +280,27 @@ var EVENTS=[
     "end": "31/01/1920", 
     "description": "", 
     "name": "First commercial radio", 
-    "opt_c": 1, 
+    "opt_c": 2, 
     "image": "events18/culture_firstcommercialradio.jpg", 
     "cls": "events culture world"
+},
+{
+    "start": "01/01/1920", 
+    "end": "31/01/1920", 
+    "description": "", 
+    "name": "Karel Čapek writes the play R.U.R", 
+    "opt_c": 1, 
+    "image": "events18/cz_RUR.jpg", 
+    "cls": "events culture czech "
+},
+{
+    "start": "01/01/1920", 
+    "end": "31/01/1920", 
+    "description": "", 
+    "name": "The puppet Spejbl steps onto the stage", 
+    "opt_c": 5, 
+    "image": "events18/cz_spejbl.jpg", 
+    "cls": "events culture czech two"
 },
 /*{
     "start": "01/01/1920", 
@@ -576,6 +594,24 @@ var EVENTS=[
     "image": "events38/politcs_nagasaki.jpg", 
     "cls": "events politics world"
 },
+{
+    "start": "01/01/1946", 
+    "end": "31/01/1946", 
+    "description": "", 
+    "name": " A film festival takes place in Karlovy Vary", 
+    "opt_c": 5, 
+    "image": "events38/cz_karlovyfestival.jpg", 
+    "cls": "events politics czech two"
+},
+{
+    "start": "01/01/1947", 
+    "end": "31/01/1947", 
+    "description": "", 
+    "name": " Czechoslovakia wins the IIHF World Championships for the first time. ", 
+    "opt_c": 5, 
+    "image": "events38/cz_hockey.jpg", 
+    "cls": "events politics czech two"
+},
 
 /*   1948  */ 
 
@@ -607,6 +643,15 @@ var EVENTS=[
     "cls": "events art world"
 },
 {
+    "start": "01/01/1950", 
+    "end": "31/01/1950", 
+    "description": "", 
+    "name": "Milada Horákova trail", 
+    "opt_c": 2, 
+    "image": "events48/cz_horakova.jpg", 
+    "cls": "events politics czech two"
+},
+{
     "start": "01/01/1953", 
     "end": "31/01/1953", 
     "description": "", 
@@ -634,12 +679,30 @@ var EVENTS=[
     "cls": "events politics world"
 },
 {
+    "start": "01/01/1954", 
+    "end": "31/01/1954", 
+    "description": "", 
+    "name": "Regular TV broadcasts begin", 
+    "opt_c": 1, 
+    "image": "events48/cz_regularbroadcast.jpg", 
+    "cls": "events culture czech"
+},
+{
     "start": "01/01/1955", 
     "end": "31/01/1955", 
     "description": "", 
     "name": "First spartakiade", 
     "opt_c": 2, 
     "image": "events48/culture_firstspartakiade.jpg", 
+    "cls": "events culture czech"
+},
+{
+    "start": "01/01/1955", 
+    "end": "31/01/1955", 
+    "description": "", 
+    "name": "Stalin statue on Letná unveiled", 
+    "opt_c": 5, 
+    "image": "events48/cz_stalinmonument.jpg", 
     "cls": "events culture czech"
 },
 {
@@ -650,6 +713,15 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events48/art_beyus.jpg", 
     "cls": "events art world "
+},
+{
+    "start": "01/01/1957", 
+    "end": "31/01/1957", 
+    "description": "", 
+    "name": "Krteček is screened on TV", 
+    "opt_c": 4, 
+    "image": "events48/cz_krtecek.jpg", 
+    "cls": "events culture czech"
 },
 {
     "start": "01/01/1957", 
@@ -677,7 +749,16 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events/Czechoslovak_Socialist_republic.jpg", 
     "cls": "events politics czech"
-  }, 
+}, 
+{
+    "start": "01/01/1960", 
+    "end": "31/01/1960", 
+    "description": "", 
+    "name": "Kofola is launched", 
+    "opt_c": 2, 
+    "image": "events48/cz_kofola.jpg", 
+    "cls": "events culture czech"
+},
 {
     "start": "01/01/1961", 
     "end": "31/01/1961", 
@@ -687,6 +768,15 @@ var EVENTS=[
     "image": "events48/technology_gagarin.jpg", 
     "cls": "events sciencetechnology world "
 },
+{
+    "start": "01/01/1961", 
+    "end": "31/01/1961", 
+    "description": "", 
+    "name": "Otto Wichterle makes contact lenses", 
+    "opt_c": 4, 
+    "image": "events48/cz_wichterle.jpg", 
+    "cls": "events sciencetechnology czech two"
+}, 
 {
     "start": "01/01/1962", 
     "end": "31/01/1962", 
@@ -698,12 +788,21 @@ var EVENTS=[
 },
 {
     "start": "01/01/1963", 
-    "end": "31/01/1953", 
+    "end": "31/01/1963", 
     "description": "", 
     "name": "John F. Kennedy is assassinated", 
     "opt_c": 6, 
     "image": "events48/politics_kennedyassasination.jpg", 
     "cls": "events politics world"
+},
+{
+    "start": "01/01/1963", 
+    "end": "31/01/1963", 
+    "description": "", 
+    "name": "Karel Gott wins his first Zlatý Slavík", 
+    "opt_c": 2, 
+    "image": "events48/cz_gott.jpg", 
+    "cls": "events culture czech"
 },
 {
     "start": "01/01/1964", 
@@ -714,11 +813,37 @@ var EVENTS=[
     "image": "events48/art_warhol.jpg", 
     "cls": "events art world"
 },
+{
+    "start": "01/01/1966", 
+    "end": "31/01/1966", 
+    "description": "", 
+    "name": "Semtex is invented by Stanislav Brebera", 
+    "opt_c": 2, 
+    "image": "events48/cz_semtex.jpg", 
+    "cls": "events sciencetechnology czech"
+}, 
+{
+    "start": "01/01/1966", 
+    "end": "31/01/1966", 
+    "description": "", 
+    "name": "works of Cimrman is 'discovered'", 
+    "opt_c": 5, 
+    "image": "events48/cz_cimrman.jpg", 
+    "cls": "events culture czech"
+},
 
 
 
 /*   1968  */ 
-
+{
+    "start": "01/01/1968", 
+    "end": "31/01/1968", 
+    "description": "", 
+    "name": "Prague Spring", 
+    "opt_c": 5, 
+    "image": "events68/cz_praguespring.jpg", 
+    "cls": "events politics czech"
+},
 {
     "start": "01/01/1966", 
     "end": "31/01/1966", 

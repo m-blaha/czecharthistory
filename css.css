@@ -115,8 +115,7 @@ a {
 	text-align: center;
 }
 #year {
-	font-family: NowAltT;
-	font-size: 35em;
+	font-size: 5em;
 	line-height: 100vh;
   margin: 0 auto;
   position: fixed;
