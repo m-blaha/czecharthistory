@@ -27,7 +27,7 @@
         <div class="inner">
             <div class="year"><%= years %></div>
             <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
-                <div class="image"><img src="img/<%= image %>" alt="" /></div>
+                <div class="image"><div class="overlay"></div><img src="img/<%= image %>" alt="" /></div>
             <% } %>
             <div class="name"><%= name %></div>
             <% if (typeof(description) !== 'undefined') { %>
@@ -90,6 +90,7 @@
 
 <body>
     <div id="gradient_container"><div id="gradient"></div></div>
+    <div id="gridlines_container"><div id="gridlines"><img src="img/grid-03.svg"></div></div>
     <div class="info">
         <div class="menuSidePanel">
             <ul>
@@ -101,18 +102,19 @@
         </div>
         <form class="filters">
             <div>
+                <span href="#" data-value="art" class="classfilter">Art</span>
                 <span href="#" data-value="politics" class="classfilter">Politics</span>
                 <span href="#" data-value="culture" class="classfilter">Culture</span>
-                <span href="#" data-value="technology" class="classfilter">Technology</span>
+                <span href="#" data-value="sciencetechnology" class="classfilter">Technology</span>
             </div>
         </form>
         <div class="navigationSidePanel">
-            <ul>
-                <li id="year"></li>
+            <div id="year"></div>
+            <!--<ul>
                 <li>Period</li>
                 <li class="underline">Timeline</li>
                 <li>Artworks</li>
-            </ul>
+            </ul>-->
         </div>
 
     </div>

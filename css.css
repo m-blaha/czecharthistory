@@ -10,17 +10,29 @@
 	font-family: Ampersand;
 	src: url(fonts/ampersand.ttf);
 }
+@font-face {
+	font-family: NowAltT;
+	src: url(fonts/NowAlt-Thin.otf);
+}
+@font-face {
+	font-family: Signatura;
+	src: url(fonts/Signatura-Monoline.otf);
+}
+
 
 html {
 	–webkit-font-smoothing: antialiased;
 }
 body {
-	background: url(img/static.gif) repeat top center;
 	margin: 0;
 }
 
 p, h1 {
 	font-family: Arial, Helvetica, sans-serif
+}
+a {
+	text-decoration: none;
+	color: black;
 }
 
 
@@ -28,7 +40,6 @@ p, h1 {
 .info {
 	font-family: FabrikR;
 	position: relative;
-	z-index: 1000;
 }
 .menuSidePanel {
 	position: fixed;
@@ -39,6 +50,7 @@ p, h1 {
 	-webkit-transform-origin: 0 100%;
 	bottom: 0;
 	left: 0px;
+	z-index: 1000;
 }
 .menuSidePanel ul {
 	list-style: none;
@@ -54,7 +66,7 @@ p, h1 {
 	margin-left: 10px;
 }
 .menuSidePanel .periodName {
-	font-size: 25px;
+	font-size: 1.2em;
 	line-height: 30px;
 	margin-left: 15px;
 	font-weight: normal;
@@ -66,13 +78,14 @@ p, h1 {
 	font-size: 30px;
 	text-align: right;
 	margin-right: 35px;
+	text-decoration: none;
 }
 /* navigation */
-.navigationSidePanel {
+
+/*.navigationSidePanel {
 	font-family: FabrikR;
-	font-size: 22px;
 	position: fixed;
-	height: 50px;
+	height: 90px;
 	width: 100vh;
 	display: inline;
 	transform: rotate(-90deg) translate(90%, 100%);
@@ -85,8 +98,6 @@ p, h1 {
 	list-style: none;
     display: inline-block;
     width: 100vh;
-    line-height: 30px;
-    left: 20px;
     transform: rotate(-180deg) translate(0, 0);
 	-webkit-transform-origin: 0, 0;
 }
@@ -94,22 +105,46 @@ p, h1 {
 	display:inline-block;
 	margin-left: 15px;
 	text-align: left;
+}*/
+.navigationSidePanel {
+	width: 100%;
+	position: relative;
+	height: 100vh;
+	display: block;
+	margin: 0;
+	text-align: center;
 }
-.navigationSidePanel .underline {
-	text-decoration: line-through;
+#year {
+	font-family: NowAltT;
+	font-size: 35em;
+	line-height: 100vh;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0; right: 0; top: 0; left: 0;
+  text-align: center;
+  color: #c3ac8b;
 }
 
 /* filters */
 .filters {
 	font-family: FabrikR;
 	position: fixed;
+	height: 50px;
+	width: 100vh;
+	display: inline;
+	z-index: 1000;
+	height: 40px;
+	font-size: 1.2em;
+	top: 0px;
+	right: 0px;
+	bottom:0px;
 }
 .filters div {
-	margin-left: 60px;
 	margin-top: 10px;
 }
 .classfilter {
     cursor: pointer;
+    margin-right: 10px;
 }
 .strikethrough{
   text-decoration: line-through;
@@ -164,13 +199,18 @@ p, h1 {
     pointer-events:auto;
     transition: all 2s ease-out, visibility 1ms;
 }
-
 .event .inner img {
-	width: 220px;
+	width: 300px;
+	filter: grayscale(100%);
+
 	/*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);*/
 }
+
 .event .inner:hover {
 	transform: scale(1.05);
+}
+.czech img {
+	border-radius: 50%;
 }
 .event .name {
 	font-family: Arial;
@@ -179,21 +219,57 @@ p, h1 {
 }
 .year {
 	font-family: FabrikR;
-	display: none;
 }
 .artworks .inner img {
-	width: 200px;
+	width: 400px;
+	filter: none !important;
+	z-index: 100;
+}
+.artworks .name {
+	visibility: hidden;
+}
+.artworks .description {
+	font-family: FabrikR;
+	margin-top: -20px;
 }
 .styles {
 	visibility: hidden;
 }
 .textual .inner img{
-	width: 350px !important;
+	width: 400px !important;
 }
 .description {
 	width: 200px;
-	font-family: FabrikR;
 	font-size: 19px;
+}
+.paragraph .description {
+	font-family: Signatura !important;
+	font-size: 2.5em;
+	width: 300px;
+}
+.illustration .inner img{
+	width: 500px;
+}
+
+/* sizes */
+
+.three .name {
+	width: 100px !important;
+}
+.three img {
+	width: 100px !important;
+}
+.two .name {
+	width: 150px !important;
+}
+.two img {
+	width: 150px !important;
+}
+.zero .name {
+	width: 350px !important;
+}
+.zero img {
+	width: 450px !important;
 }
 
 
@@ -208,6 +284,21 @@ p, h1 {
 }
 */
 
+
+/*#gridlines img {
+	position:fixed;
+	width: 100%;
+    z-index: 100;
+    top: -20px;
+    background-color: #c3ac8b;
+    opacity: 0.2;
+}*/
+#gridlines img {
+	position:fixed;
+	width: 100%;
+    z-index: 100;
+    top: -20px;
+}
 
 #gradient_container {
 	position: relative;
