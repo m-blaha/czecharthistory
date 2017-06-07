@@ -80,6 +80,10 @@ a {
 	margin-right: 35px;
 	text-decoration: none;
 }
+.menuSidePanel ul .logo {
+    float: right;
+    margin-right: 35px;
+}
 /* navigation */
 
 /*.navigationSidePanel {
