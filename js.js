@@ -149,9 +149,9 @@ function scroll_event(parent) {
 }
 
 function set_year() {
-    var days = ($(window).scrollTop() - $('#divTimeLine').offset().top) / _timeline.dayPixelLength();
+    var days = ($(window).scrollTop() + ($(window).height()/2) - $('#divTimeLine').offset().top) / _timeline.dayPixelLength();
     var year = _timeline.startDate().getFullYear() + Math.floor(days / 365);
-    $('#year').text(year);
+    $('#year').text(shortYear(year));
 }
 
 function scroll(e) {
