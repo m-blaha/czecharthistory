@@ -11,7 +11,7 @@
 
 		/* dimensions: spanning the background from edge to edge */
 		position:fixed;
-		top: 0; right: 0; bottom: 0; left: 0;
+		top: 0; right: 0; bottom: 0; left: 50px;
 		z-index: 900; /* z-index needs to be >= elements on the site. */
 
 		/* position: centering content */
@@ -51,18 +51,13 @@
 
 		/* dimensions: cut off images */
 		overflow: hidden;
-		padding: 25px 25px 0;
-		border-bottom: 25px solid transparent;
 
 		/* dimensions: handling large content */
-		margin-left: 5%;
-		margin-right: 5%;
-		max-height: 95%;
-        height: 90%;
-        width: 95%;
+        height: 100%;
+        width: 100%;
 
 		/* styling */
-		background: #fff;
+		/*background: #fff;*/
 		cursor: auto;
 
 		/* reset white-space wrapping */

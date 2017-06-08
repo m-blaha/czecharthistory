@@ -131,7 +131,7 @@ a {
 	height: 50px;
 	width: 100vh;
 	display: inline;
-	z-index: 1000;
+	z-index: 800;
 	height: 40px;
 	font-size: 1.2em;
 	top: 0px;
@@ -299,9 +299,10 @@ a {
 #gridlines img {
     pointer-events: none;
 	position:fixed;
+    left: 50px;
+    top: -20px;
 	width: 100%;
     z-index: 1000;
-    top: -20px;
 }
 
 #gradient_container {
@@ -325,4 +326,50 @@ a {
     }
 
 .popup {
+	font-family: FabrikR;
 }
+
+.popup h2 {
+    font-size: 3em;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 5em;
+}
+
+.popup .tags {
+    position: absolute;
+    left: 21.0%;
+    top: 15%;
+}
+
+.popup .text {
+    position: absolute;
+    left: 38.5%;
+    top: 15%;
+    width: 50%;
+}
+
+.popup .image {
+    width: 74%;
+}
+
+.popup .years {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    font-size: 4em;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+

@@ -13,13 +13,26 @@
 
     <script type="text/html" id="popup_tmpl">
         <div class="popup">
-            <h2><%= name %></h2>
-              <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
-                  <div class="image"><img src="img/<%= image %>" alt="" /></div>
-              <% } %>
-              <% if (typeof(description) !== 'undefined') { %>
-                  <div class="description"><%= description %></div>
-              <% } %>
+            <div class="close">
+                <a href="#" class="featherlight-close">&#10005;</a>
+            </div>
+            <div class="tags">
+                TAGS:
+                <p>Culture, Czech</p>
+            </div>
+            <div class="years"><%= years %></div>
+            <div class="text">
+                <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
+                    <div class="image">
+                        <img class="img-responsive" src="img/<%= image %>" alt="" />
+                    </div>
+                <% } %>
+                <h2 class="title"><%= name %></h2>
+                <p>Lorem ipsum dolor sit amet, vis eu posse graecis corrumpit. Homero civibus ea quo, melius phaedrum inciderint duo ea. Usu timeam senserit ex. Pro possim adolescens ei. Maluisset complectitur definitionem in usu, doming mandamus eu per, pri stet salutandi in.</p>
+            </div>
+            <% if (typeof(description) !== 'undefined') { %>
+                <div class="name"><%= description %></div>
+            <% } %>
         </div>
     </script>
 
@@ -59,8 +72,20 @@
                 }
             });
 
+            var css='featherlight';
+            var background = $([
+                '<div class="'+css+'-loading '+css+'">',
+                    '<div class="'+css+'-content">',
+                        '<div class="'+css+'-inner"></div>',
+                    '</div>',
+                '</div>'].join(''));
+
             $('.event .inner').click(function() {
-                $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {});
+                $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {
+                    openSpeed: 1000,
+                    closeSpeed: 1000,
+                    background: background,
+                    });
             });
 
             $('.event .inner').hover(
