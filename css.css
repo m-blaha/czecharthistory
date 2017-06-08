@@ -47,16 +47,12 @@ a {
 .menuHome .menuItem {
     display: table-cell;
     width: 16.6666%;
-    /*flex: 1;*/
-    /*align-self: flex-end;*/
+    padding-bottom: 50px;
     border-left: 1px solid #ccc;
-}
-.menuHome .menuItem a {
-    display: block;
-    height: 100%;
-    /*transform: rotate(-90deg);*/
+    vertical-align: bottom;
 }
 .menuHome .menuItem span {
+    display: inline-block;
     transform: rotate(-90deg);
 }
 
