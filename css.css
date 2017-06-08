@@ -55,12 +55,15 @@ a {
     display: table;
     width: 100%;
     height: 100vh;
+    font-family: FabrikR;
 }
 .menuHome .menuItem {
     display: table-cell;
     width: 16.6666%;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
     border-left: 1px solid #aaa;
+    color: #fff;
+    font-size: 2em;
     vertical-align: bottom;
 }
 .menuHome .menuItem span {
