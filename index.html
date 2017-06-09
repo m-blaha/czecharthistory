@@ -3,9 +3,33 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var timer;
+            $('.menuItem').hover(
+                function(){
+                    var video=$(this).data('videosrc');
+                    if (video) {
+                        timer=setTimeout(function(){
+                            $('video source').attr('src', video);
+                            var vid=$('video');
+                            vid.fadeOut();
+                            setTimeout(function() {
+                                vid.fadeIn();
+                                vid[0].load();
+                            }, 300);
+                        }, 300);
+                    }
+                },
+                function(){
+                    clearTimeout(timer);
+                }
+            );
+        })
+    </script>
 </head>
 
 <body class="home">
@@ -20,11 +44,11 @@
     </div>
     
     <div class="menuHome">
-        <a href="timeline.html?start=1918" class="menuItem"><span>1918-1938</span></a>
-        <a href="timeline.html?start=1938" class="menuItem"><span>1938-1948</span></a>
-        <a href="timeline.html?start=1948" class="menuItem"><span>1948-1968</span></a>
+        <a href="timeline.html?start=1918" class="menuItem" data-videosrc="img/videoHP/18-38.mp4"><span>1918-1938</span></a>
+        <a href="timeline.html?start=1938" class="menuItem" data-videosrc="img/videoHP/38-48.mp4"><span>1938-1948</span></a>
+        <a href="timeline.html?start=1948" class="menuItem" data-videosrc="img/videoHP/48-68.mp4"><span>1948-1968</span></a>
         <a href="timeline.html?start=1968" class="menuItem"><span>1968-1980</span></a>
-        <a href="timeline.html?start=1980" class="menuItem"><span>1980-1989</span></a>
+        <a href="timeline.html?start=1980" class="menuItem" data-videosrc="img/videoHP/80-89.mp4"><span>1980-1989</span></a>
         <a href="timeline.html?start=1989" class="menuItem"><span>1989-2018</span></a>
     </div>
     
