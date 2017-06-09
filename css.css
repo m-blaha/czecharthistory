@@ -325,19 +325,29 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
     }
 
-.popup {
+.popup, .popup-artwork {
 	font-family: FabrikR;
 }
 
-.popup h2 {
-    font-size: 3em;
-}
-
-.popup .close {
+.popup-close {
     position: absolute;
     top: 0;
     right: 10px;
     font-size: 5em;
+}
+
+.popup-years {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    font-size: 4em;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+
+.popup h2 {
+    font-size: 3em;
 }
 
 .popup .tags {
@@ -357,13 +367,42 @@ a {
     width: 74%;
 }
 
-.popup .years {
+
+.popup-artwork h1 {
+    font-size: 5em;
+    margin: 0 0 10px 0;
+}
+
+.popup-artwork h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.popup-artwork .text {
     position: absolute;
+    left: 10%;
     top: 15%;
-    right: 10px;
-    font-size: 4em;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
+    width: 83.5%;
+    height: 70%;
+}
+
+.popup-artwork .popisy {
+    float: left;
+    width: 29%;
+}
+
+.popup-artwork .popisy .small {
+    font-size: 0.8em;
+    padding-top: 100px;
+    padding-left: 42%;
+}
+
+.popup-artwork .image {
+    width: 70%;
+    height: 100%;
+    float: right;
+    padding-left: 4.2%;
+	overflow:hidden;
 }
 
 

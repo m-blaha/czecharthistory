@@ -7,20 +7,22 @@
 	<script type="text/javascript" src="data.js"></script>
 	<script type="text/javascript" src="featherlight.js"></script>
 	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="color-thief.js"></script>
 	<script type="text/javascript" src="js.js"></script>
 	<link rel="stylesheet" href="featherlight.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
 
     <script type="text/html" id="popup_tmpl">
+        <div class="popup-padding">&nbsp;</div>
         <div class="popup">
-            <div class="close">
+            <div class="popup-close">
                 <a href="#" class="featherlight-close">&#10005;</a>
             </div>
             <div class="tags">
                 TAGS:
                 <p>Culture, Czech</p>
             </div>
-            <div class="years"><%= years %></div>
+            <div class="popup-years"><%= years %></div>
             <div class="text">
                 <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
                     <div class="image">
@@ -30,9 +32,32 @@
                 <h2 class="title"><%= name %></h2>
                 <p>Lorem ipsum dolor sit amet, vis eu posse graecis corrumpit. Homero civibus ea quo, melius phaedrum inciderint duo ea. Usu timeam senserit ex. Pro possim adolescens ei. Maluisset complectitur definitionem in usu, doming mandamus eu per, pri stet salutandi in.</p>
             </div>
-            <% if (typeof(description) !== 'undefined') { %>
-                <div class="name"><%= description %></div>
-            <% } %>
+        </div>
+    </script>
+
+    <script type="text/html" id="popup_artwork_tmpl">
+        <div class="popup-padding"></div>
+        <div class="popup-artwork">
+            <div class="popup-close">
+                <a href="#" class="featherlight-close">&#10005;</a>
+            </div>
+            <div class="popup-years"><%= years %></div>
+            <div class="text">
+                <% if (typeof(description) !== 'undefined') { %>
+                    <h1 class="name"><%= description %></h1>
+                <% } %>
+                <% if (typeof(image) !== 'undefined' && image.length !== 0) { %>
+                    <div class="image">
+                        <img class="img-responsive" src="img/<%= image %>" alt="" />
+                    </div>
+                <% } %>
+                <div class="popisy">
+                    <h2 class="title"><%= name %></h2>
+                    <p>Lorem ipsum dolor sit amet, vis eu posse graecis corrumpit. Homero civibus ea quo, melius phaedrum inciderint duo ea. Usu timeam senserit ex. Pro possim adolescens ei. Maluisset complectitur definitionem in usu, doming mandamus eu per, pri stet salutandi in.</p>
+
+                    <p class="small">Lorem ipsum dolor sit amet, vis eu posse graecis corrumpit. Homero civibus ea quo, melius phaedrum inciderint duo ea. Usu timeam senserit ex. Pro possim adolescens ei. Maluisset complectitur definitionem in usu, doming mandamus eu per, pri stet salutandi in.</p>
+                </div>
+            </div>
         </div>
     </script>
 
@@ -81,11 +106,32 @@
                 '</div>'].join(''));
 
             $('.event .inner').click(function() {
-                $.featherlight($(popup_tmpl(EVENTS[$(this).parent().data('eventindex')])), {
+                var evnt=EVENTS[$(this).parent().data('eventindex')];
+                evnt.artwork = evnt.cls.indexOf('artworks');
+                if (evnt.artwork==-1) {
+                    var content=$(popup_tmpl(evnt));
+                } else {
+                    var content=$(popup_artwork_tmpl(evnt));
+                }
+                $.featherlight(content, {
+                    evnt: evnt,
+                    colorthief: new ColorThief(),
                     openSpeed: 1000,
                     closeSpeed: 1000,
                     background: background,
-                    });
+                    afterOpen: function(event){
+                        if (this.evnt.artwork!=-1) {
+                            var c=this.colorthief.getColor($('img', this.$content)[0]);
+                            this.$instance.css('background', 'rgba(' + c.toString() + ',1)');
+                            $('.menuSidePanel').css('background', 'rgba(' + c.toString() + ',1)');
+                        }
+                    },
+                    beforeClose: function(event){
+                        if (this.evnt.artwork!=-1) {
+                            $('.menuSidePanel').css('background', 'rgba(255,255,255,1)');
+                        }
+                    }
+                });
             });
 
             $('.event .inner').hover(
