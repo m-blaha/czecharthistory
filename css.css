@@ -115,13 +115,16 @@ a {
 	text-align: center;
 }
 #year {
-	font-size: 5em;
+	font-family: Arial;
+	font-size: 15em;
 	line-height: 100vh;
   margin: 0 auto;
   position: fixed;
   bottom: 0; right: 0; top: 0; left: 0;
   text-align: center;
-  color: #c3ac8b;
+  z-index: 1000;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 /* filters */
@@ -176,6 +179,7 @@ a {
 	position: absolute;
 	font-size: 2em;
 	background: none;
+
 }
 
 /* events */
@@ -199,9 +203,9 @@ a {
     transition: all 2s ease-out, visibility 1ms;
 }
 .event .inner img {
-	width: 300px;
+	width: 400px;
 	filter: grayscale(100%);
-
+	border: 2px solid black;
 	/*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);*/
 }
 
@@ -212,33 +216,49 @@ a {
 	border-radius: 50%;
 }
 .event .name {
+	text-align: center;
 	font-family: Arial;
-	font-size: 11px;
-	width: 200px;
+	font-size: 20px;
+	width: 400px;
+}
+.namechapter .name {
+	font-family: FabrikR;
+	font-size: 4em;
+	width: 70%;
+	text-align: left;
+	color: black;
 }
 .year {
 	font-family: FabrikR;
+	visibility: hidden;
 }
 .artworks .inner img {
-	width: 400px;
+	width: 600px;
 	filter: none !important;
 	z-index: 100;
+	visibility: visible !important;
 }
 .artworks .name {
 	visibility: hidden;
 }
 .artworks .description {
-	font-family: FabrikR;
-	margin-top: -20px;
+	position: absolute;
+	top: -20px; right: -400px;
+	font-family: FabrikB;
+	font-size: 4em;
+	color: white;
+	transform: rotate(90deg) translate(0%, 100%);
+	-webkit-transform-origin: 0 100%;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
 }
-.styles {
+.styles .name {
 	visibility: hidden;
 }
 .textual .inner img{
 	width: 400px !important;
 }
 .description {
-	width: 200px;
 	font-size: 19px;
 }
 .paragraph .description {
@@ -247,28 +267,28 @@ a {
 	width: 300px;
 }
 .illustration .inner img{
-	width: 500px;
+	width: 40%;
 }
 
 /* sizes */
 
 .three .name {
-	width: 100px !important;
+	width: 20% !important;
 }
 .three img {
-	width: 100px !important;
+	width: 20% !important;
 }
 .two .name {
-	width: 150px !important;
+	width: 40% !important;
 }
 .two img {
-	width: 150px !important;
+	width: 40% !important;
 }
 .zero .name {
-	width: 350px !important;
+	width: 50% !important;
 }
 .zero img {
-	width: 450px !important;
+	width: 50% !important;
 }
 
 
@@ -284,20 +304,22 @@ a {
 */
 
 
-/*#gridlines img {
-	position:fixed;
-	width: 100%;
-    z-index: 100;
-    top: -20px;
-    background-color: #c3ac8b;
-    opacity: 0.2;
-}*/
+
 #gridlines img {
 	position:fixed;
 	width: 100%;
     z-index: 100;
     top: -20px;
+    visibility: hidden;
 }
+/*#gridlines img {
+	position:fixed;
+	width: 100%;
+    z-index: 100;
+    top: -20px;
+    background-color: white;
+    opacity: 0.2;
+}*/
 
 #gradient_container {
 	position: relative;

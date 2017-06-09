@@ -38,6 +38,563 @@ var SPANS=[
 ];
 
 var EVENTS=[
+  
+/* artworks 1989 */
+{
+    "start": "01/01/1919", 
+    "end": "31/01/1919", 
+    "description": "Rudolf Kremlička", 
+    "name": "Myčky", 
+    "opt_c": 4, 
+    "image": "artworks/Kremlicka.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1919", 
+    "end": "31/01/1919", 
+    "description": "Otto Gutfreund", 
+    "name": "Head of woman", 
+    "opt_c": 1, 
+    "image": "artworks/Gutfreund.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1924", 
+    "end": "31/01/1924", 
+    "description": "Jan Zrzavý", 
+    "name": "Mládí (Jaro)", 
+    "opt_c": 1, 
+    "image": "artworks/zrzavy24.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1926", 
+    "end": "31/01/1926", 
+    "description": "Karel Teige", 
+    "name": "Typography", 
+    "opt_c": 2, 
+    "image": "artworks/Teige.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1928", 
+    "end": "31/01/1928", 
+    "description": "Josef Čapek", 
+    "name": "Povídání o pejskovi a kočičcee", 
+    "opt_c": 4, 
+    "image": "artworks/capek28.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1931", 
+    "end": "31/01/1931", 
+    "description": "Toyen", 
+    "name": "Noc v Oceánii", 
+    "opt_c": 2, 
+    "image": "artworks/Toyen.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1932", 
+    "end": "31/01/1932", 
+    "description": "Emil Filla", 
+    "name": "Laying woman", 
+    "opt_c": 1, 
+    "image": "artworks/Filla.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1936", 
+    "end": "31/01/1936", 
+    "description": "Zdeněk Pěšánek", 
+    "name": "Torso", 
+    "opt_c": 4, 
+    "image": "artworks/Pesanek.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1932", 
+    "end": "31/01/1932", 
+    "description": "Jindřich Štýrský", 
+    "name": "Emílie ke mně přichází ve snu", 
+    "opt_c": 6, 
+    "image": "artworks/Styrsky.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1933", 
+    "end": "31/01/1933", 
+    "description": "Josef Šíma", 
+    "name": "Návrat Theseův", 
+    "opt_c": 2, 
+    "image": "artworks/sima33.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1936", 
+    "end": "31/01/1936", 
+    "description": "Josef Sudek", 
+    "name": "Reklamní fotografie Sutnara", 
+    "opt_c": 1, 
+    "image": "artworks/Sudek.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1941", 
+    "end": "31/01/1941", 
+    "description": "Toyen", 
+    "name": "Bramborové divadlo", 
+    "opt_c": 0, 
+    "image": "artworks/toyen41.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1940", 
+    "end": "31/01/1940", 
+    "description": "Josef Liesler", 
+    "name": "Salome", 
+    "opt_c": 3, 
+    "image": "artworks/liesler1943.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1941", 
+    "end": "31/01/1941", 
+    "description": "František Jiroudek", 
+    "name": "Mim", 
+    "opt_c": 6, 
+    "image": "artworks/jiroudek41.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1942", 
+    "end": "31/01/1942", 
+    "description": "Václav Tikal", 
+    "name": "Autoportrét", 
+    "opt_c": 1, 
+    "image": "artworks/tikal42.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1943", 
+    "end": "31/01/1943", 
+    "description": "František Hudeček", 
+    "name": "Noční Chodec", 
+    "opt_c": 3, 
+    "image": "artworks/hudecek1943.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1944", 
+    "end": "31/01/1944", 
+    "description": "Václav Chad", 
+    "name": "Žena – portrét na červeném pozadí", 
+    "opt_c": 5, 
+    "image": "artworks/chad44.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1944", 
+    "end": "31/01/1944", 
+    "description": "Václav Zykmund", 
+    "name": "Akce k výhružnému kompasu", 
+    "opt_c": 2, 
+    "image": "artworks/zykmund44.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1946", 
+    "end": "31/01/1946", 
+    "description": "Václav Tikal", 
+    "name": "Stopa věku", 
+    "opt_c": 3, 
+    "image": "artworks/tikal1946.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1947", 
+    "end": "31/01/1947", 
+    "description": "František Gross", 
+    "name": "Figura", 
+    "opt_c": 0, 
+    "image": "artworks/gross1947.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1948", 
+    "end": "31/01/1948", 
+    "description": "Ladislav Zívr", 
+    "name": "Naslouchající", 
+    "opt_c": 4, 
+    "image": "artworks/zivr48.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1948", 
+    "end": "31/01/1948", 
+    "description": "Jan Zrzavý", 
+    "name": "Červená bárka", 
+    "opt_c": 6, 
+    "image": "artworks/zrzavy.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1949", 
+    "end": "31/01/1949", 
+    "description": "Pavel Brázda", 
+    "name": "Obluda čeká, obluda má čas. Vlastní podobizna P.B.", 
+    "opt_c": 1, 
+    "image": "artworks/brazda49.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1950", 
+    "end": "31/01/1950", 
+    "description": "Jaromír Schoř", 
+    "name": "Vám poděkování a lásku Vám", 
+    "opt_c": 3, 
+    "image": "artworks/schor50.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1951", 
+    "end": "31/01/1954", 
+    "description": "Mikuláš Medek", 
+    "name": "Velké jídlo", 
+    "opt_c": 0, 
+    "image": "artworks/medek.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1952", 
+    "end": "31/01/1952", 
+    "description": "Alena Čermáková", 
+    "name": "x", 
+    "opt_c": 1, 
+    "image": "artworks/cermakova.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1950", 
+    "end": "31/01/1950", 
+    "description": "Věra Nováková", 
+    "name": "Job", 
+    "opt_c": 6, 
+    "image": "artworks/novakova.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1954", 
+    "end": "31/01/1954", 
+    "description": "Pavel Brázda", 
+    "name": "Muž v krabici", 
+    "opt_c": 4, 
+    "image": "artworks/brazda54.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1957", 
+    "end": "31/01/1957", 
+    "description": "Zbyněk Sekal", 
+    "name": "Křičící hlava", 
+    "opt_c": 3, 
+    "image": "artworks/sekal.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1958", 
+    "end": "31/01/1958", 
+    "description": "Václav Boštík", 
+    "name": "Prostor, hnota, světlo", 
+    "opt_c": 1, 
+    "image": "artworks/bostik58.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1958", 
+    "end": "31/01/1958", 
+    "description": "Jan Koblasa", 
+    "name": "plastika", 
+    "opt_c": 5, 
+    "image": "artworks/koblasa.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1959", 
+    "end": "31/01/1959", 
+    "description": "Eduard Ovčáček", 
+    "name": "Hlava", 
+    "opt_c": 5, 
+    "image": "artworks/ovcacek.jpg", 
+    "cls": "artworks"
+}, 
+
+{
+    "start": "01/01/1960", 
+    "end": "31/01/1960", 
+    "description": "Mikuláš Medek", 
+    "name": "Modrá kompozice", 
+    "opt_c": 1, 
+    "image": "artworks/medek60.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1965", 
+    "end": "31/01/1965", 
+    "description": "Jiří Balcar", 
+    "name": "DE-6", 
+    "opt_c": 5, 
+    "image": "artworks/balcar.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1966", 
+    "end": "31/01/1966", 
+    "description": "Karel Nepraš", 
+    "name": "X", 
+    "opt_c": 5, 
+    "image": "artworks/nepras.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1967", 
+    "end": "31/01/1967", 
+    "description": "Jiří Načeradský", 
+    "name": "Červenec, útěk do hor", 
+    "opt_c": 1, 
+    "image": "artworks/naceradsky67.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1968", 
+    "end": "31/01/1968", 
+    "description": "Eva Kmentová", 
+    "name": "Hands", 
+    "opt_c": 4, 
+    "image": "artworks/kmentova.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1969", 
+    "end": "31/01/1969", 
+    "description": "Zdeněk Sýkora", 
+    "name": "Hands", 
+    "opt_c": 1, 
+    "image": "artworks/sykora.jpg", 
+    "cls": "artworks"
+},
+
+{
+    "start": "01/01/1970", 
+    "end": "31/01/1970", 
+    "description": "František Muzika", 
+    "name": "Tři velké larvy III v modré", 
+    "opt_c": 5, 
+    "image": "artworks/muzika70.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1972", 
+    "end": "31/01/1972", 
+    "description": "Ladislav Zívr", 
+    "name": "Muž", 
+    "opt_c": 1, 
+    "image": "artworks/zivr72.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1974", 
+    "end": "31/01/1974", 
+    "description": "Stanislav Kolíbal", 
+    "name": "Dvojí možnost", 
+    "opt_c": 1, 
+    "image": "artworks/kolibal.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1976", 
+    "end": "31/01/1976", 
+    "description": "Jiří Sopko", 
+    "name": "Hlava", 
+    "opt_c": 5, 
+    "image": "artworks/sopko76.jpg", 
+    "cls": "artworks"
+},
+{
+    "start": "01/01/1977", 
+    "end": "31/01/1977", 
+    "description": "Karel Malich", 
+    "name": "Vnitřní světlo II", 
+    "opt_c": 4, 
+    "image": "artworks/malich.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1979", 
+    "end": "31/01/1979", 
+    "description": "Jiří Kolář", 
+    "name": "Autoportret", 
+    "opt_c": 5, 
+    "image": "artworks/kolar79.jpg", 
+    "cls": "artworks"
+},
+
+{
+    "start": "01/01/1980", 
+    "end": "31/01/1980", 
+    "description": "Václav Boštík", 
+    "name": "První dělení (První členění)", 
+    "opt_c": 1, 
+    "image": "artworks/bostik.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1981", 
+    "end": "31/01/1981", 
+    "description": "Magdal\u00e9na Jetelov\u00e1", 
+    "name": "\u017didle", 
+    "opt_c": 0, 
+    "image": "artworks/Jetelova.jpg", 
+    "cls": "artworks"
+  }, 
+  {
+    "start": "01/01/1983", 
+    "end": "31/01/1983", 
+    "description": "Judl Stanislav", 
+    "name": "Lacetka", 
+    "opt_c": 5, 
+    "image": "artworks/JudlX.jpg", 
+    "cls": "artworks"
+  }, 
+  {
+    "start": "01/01/1983", 
+    "end": "31/01/1983", 
+    "description": "Ivan  Kafka", 
+    "name": "Zav\u011b\u0161en\u00ed", 
+    "opt_c": 2, 
+    "image": "artworks/Kafka_zaveseniX.jpg", 
+    "cls": "artworks"
+  }, 
+  {
+    "start": "01/01/1984", 
+    "end": "31/01/1984", 
+    "description": "Jaroslav R\u00f3na", 
+    "name": "Jaro na vsi", 
+    "opt_c": 4, 
+    "image": "artworks/RonaX.jpg", 
+    "cls": "artworks"
+  }, 
+  {
+    "start": "01/01/1984", 
+    "end": "31/01/1984", 
+    "description": "Adriena Šimotová", 
+    "name": "Strach", 
+    "opt_c": 6, 
+    "image": "artworks/simotova.jpg", 
+    "cls": "artworks"
+  }, 
+  {
+    "start": "01/01/1986", 
+    "end": "31/01/1986", 
+    "description": "Michal Gabriel", 
+    "name": "Untitled", 
+    "opt_c": 0, 
+    "image": "artworks/Gabriel.jpg", 
+    "cls": "artworks"
+  }, 
+  /*{
+    "start": "01/01/1987", 
+    "end": "31/01/1987", 
+    "description": "Jiří Načeradský", 
+    "name": "Hysterie", 
+    "opt_c": 3, 
+    "image": "artworks/naceradsky88.jpg", 
+    "cls": "artworks"
+  }, */
+  {
+    "start": "01/01/1987", 
+    "end": "31/01/1987", 
+    "description": "Petr Nikl", 
+    "name": "Klub\u00e1n\u00ed", 
+    "opt_c": 6, 
+    "image": "artworks/Nikl.jpg", 
+    "cls": "artworks"
+  }, 
+  /*{
+    "start": "01/01/1987", 
+    "end": "31/01/1987", 
+    "description": "Michael Rittstein", 
+    "name": "Zab\u00edja\u010dka", 
+    "opt_c": 3, 
+    "image": "artworks/Rittstein.jpg", 
+    "cls": "artworks"
+  }, */
+  {
+    "start": "01/01/1988", 
+    "end": "31/01/1988", 
+    "description": "Kurt Gebauer", 
+    "name": "\u010cesk\u00fd rybn\u00edk", 
+    "opt_c": 1, 
+    "image": "artworks/Gebauer.jpg", 
+    "cls": "artworks"
+  }, 
+{
+    "start": "01/01/1990", 
+    "end": "31/01/1990", 
+    "description": "Jiří David", 
+    "name": "z cyklu Ukryty obraz", 
+    "opt_c": 5, 
+    "image": "artworks/david90.jpg", 
+    "cls": "artworks"
+}, 
+
+{
+    "start": "01/01/1993", 
+    "end": "31/01/1993", 
+    "description": "Jiří Kolář", 
+    "name": "Pocta Majstrovi Třeboňskému", 
+    "opt_c": 5, 
+    "image": "artworks/kolar93.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/1998", 
+    "end": "31/01/1998", 
+    "description": "Jiří sopko", 
+    "name": "Pyramida", 
+    "opt_c": 2, 
+    "image": "artworks/sopko98.jpg", 
+    "cls": "artworks"
+}, 
+{
+    "start": "01/01/2003", 
+    "end": "31/01/2003", 
+    "description": "Michael Rittstein", 
+    "name": "Na kedlubně", 
+    "opt_c": 0, 
+    "image": "artworks/rittstein03.jpg", 
+    "cls": "artworks"
+ }, 
+ {
+    "start": "01/01/2003", 
+    "end": "31/01/2003", 
+    "description": "Petr Nikl", 
+    "name": "Anna jako Pipi", 
+    "opt_c": 5, 
+    "image": "artworks/nikl03.jpg", 
+    "cls": "artworks"
+ }, 
+
+
+
+
+
+
+
+
+
+
+
   {
     "start": "01/01/1947", 
     "end": "31/01/1991", 
@@ -63,7 +620,7 @@ var EVENTS=[
     "name": "Plastic People of the Universe", 
     "opt_c": 0, 
     "image": "events/Plastic_People_of_the_Universe.jpg", 
-    "cls": "events culture czech"
+    "cls": "events culture czech two"
   }, 
   
   /*{
@@ -352,7 +909,7 @@ var EVENTS=[
     "end": "31/01/1925", 
     "description": "", 
     "name": "The First Full-Length Film with Synchronized Dialogue", 
-    "opt_c": 4, 
+    "opt_c": 2, 
     "image": "events18/culture_firstfilm.jpg", 
     "cls": "events culture world three"
 }, 
@@ -466,15 +1023,7 @@ var EVENTS=[
     "cls": "events sciencetechnology world"
 },*/
 
-{
-    "start": "01/01/1919", 
-    "end": "31/01/1919", 
-    "description": "Rudolf Kremlička", 
-    "name": "Myčky", 
-    "opt_c": 4, 
-    "image": "artworks/Kremlicka.jpg", 
-    "cls": "artworks"
-},
+
 {
     "start": "01/01/1938", 
     "end": "31/01/1938", 
@@ -484,60 +1033,7 @@ var EVENTS=[
     "image": "events/", 
     "cls": "events politics czech"
 },
-{
-    "start": "01/01/1926", 
-    "end": "31/01/1926", 
-    "description": "Karel Teige", 
-    "name": "Typography", 
-    "opt_c": 2, 
-    "image": "artworks/Teige.jpg", 
-    "cls": "artworks"
-},
-{
-    "start": "01/01/1919", 
-    "end": "31/01/1919", 
-    "description": "Otto Gutfreund", 
-    "name": "Head of woman", 
-    "opt_c": 1, 
-    "image": "artworks/Gutfreund.jpg", 
-    "cls": "artworks"
-},
-{
-    "start": "01/01/1931", 
-    "end": "31/01/1931", 
-    "description": "Toyen", 
-    "name": "Noc v Oceánii", 
-    "opt_c": 2, 
-    "image": "artworks/Toyen.jpg", 
-    "cls": "artworks"
-},
-{
-    "start": "01/01/1936", 
-    "end": "31/01/1936", 
-    "description": "Zdeněk Pěšánek", 
-    "name": "Torso", 
-    "opt_c": 4, 
-    "image": "artworks/Pesanek.jpg", 
-    "cls": "artworks"
-},
-{
-    "start": "01/01/1932", 
-    "end": "31/01/1932", 
-    "description": "Emil Filla", 
-    "name": "Laying woman", 
-    "opt_c": 1, 
-    "image": "artworks/Filla.jpg", 
-    "cls": "artworks"
-},
-{
-    "start": "01/01/1932", 
-    "end": "31/01/1932", 
-    "description": "Jindřich Štýrský", 
-    "name": "Emílie ke mně přichází ve snu", 
-    "opt_c": 6, 
-    "image": "artworks/Styrsky.jpg", 
-    "cls": "artworks"
-},
+
 {
     "start": "01/01/1934", 
     "end": "31/01/1934", 
@@ -547,15 +1043,7 @@ var EVENTS=[
     "image": "events38/politics_ww2.gif", 
     "cls": "events politics world"
 },
-{
-    "start": "01/01/1936", 
-    "end": "31/01/1936", 
-    "description": "Josef Sudek", 
-    "name": "Reklamní fotografie Sutnara", 
-    "opt_c": 1, 
-    "image": "artworks/Sudek.jpg", 
-    "cls": "artworks"
-},
+
 
 /*   1938   */
 {
@@ -623,6 +1111,15 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events18/", 
     "cls": "events art czech paragraph"
+},
+{
+    "start": "01/01/1948", 
+    "end": "31/01/1958", 
+    "description": "", 
+    "name": "Czechoslovak socialistic realism", 
+    "opt_c": 5, 
+    "image": "events48/cz_socialrealm.jpg", 
+    "cls": "events art czech"
 },
 {
     "start": "01/01/1949", 
@@ -746,7 +1243,7 @@ var EVENTS=[
     "end": "31/01/1990", 
     "description": "", 
     "name": "Czechoslovak Socialist republic", 
-    "opt_c": 5, 
+    "opt_c": 6, 
     "image": "events/Czechoslovak_Socialist_republic.jpg", 
     "cls": "events politics czech"
 }, 
@@ -826,8 +1323,8 @@ var EVENTS=[
     "start": "01/01/1966", 
     "end": "31/01/1966", 
     "description": "", 
-    "name": "works of Cimrman is 'discovered'", 
-    "opt_c": 5, 
+    "name": "works of Cimrman is discovered", 
+    "opt_c": 1, 
     "image": "events48/cz_cimrman.jpg", 
     "cls": "events culture czech"
 },
@@ -844,6 +1341,15 @@ var EVENTS=[
     "image": "events68/cz_praguespring.jpg", 
     "cls": "events politics czech"
 },
+{
+    "start": "01/01/1969", 
+    "end": "31/01/1969", 
+    "description": "", 
+    "name": "Jan Palach dies", 
+    "opt_c": 3, 
+    "image": "events68/cz_palach.jpg", 
+    "cls": "events culture czech"
+}, 
 {
     "start": "01/01/1966", 
     "end": "31/01/1966", 
@@ -920,6 +1426,15 @@ var EVENTS=[
     "start": "01/01/1977", 
     "end": "31/01/1977", 
     "description": "", 
+    "name": "Charter 77", 
+    "opt_c": 2, 
+    "image": "events68/cz_charta77.jpg", 
+    "cls": "events culture czech"
+}, 
+{
+    "start": "01/01/1977", 
+    "end": "31/01/1977", 
+    "description": "", 
     "name": "Centre Pompidu in Paris opens", 
     "opt_c": 4, 
     "image": "events68/culture_centrepompidu.jpg", 
@@ -932,7 +1447,7 @@ var EVENTS=[
     "name": "Cindy Cherman", 
     "opt_c": 4, 
     "image": "events68/art_cherman.jpg", 
-    "cls": "events art world"
+    "cls": "events art world two"
 },
 
 {
@@ -940,12 +1455,16 @@ var EVENTS=[
     "end": "31/01/1968", 
     "description": "Ladislav Sutnar", 
     "name": "Venus/All the way to USA", 
-    "opt_c": 1, 
+    "opt_c": 0, 
     "image": "artworks/Sutnar.jpg", 
     "cls": "artworks"
 },
 
 /*   1980   */
+
+/*artworks 1980*/
+
+
 /*{
     "start": "01/01/1980", 
     "end": "31/01/1980", 
@@ -960,9 +1479,9 @@ var EVENTS=[
     "end": "31/01/1988", 
     "description": "", 
     "name": "Iran\u2013Iraq War", 
-    "opt_c": 1, 
+    "opt_c": 5, 
     "image": "events/Iran_Iraq_War.jpg", 
-    "cls": "events politics world"
+    "cls": "events politics world two"
   }, 
   {
     "start": "01/01/1981", 
@@ -971,7 +1490,7 @@ var EVENTS=[
     "name": "MTv launches", 
     "opt_c": 2, 
     "image": "events68/culture_mtv.jpg", 
-    "cls": "events culture world"
+    "cls": "events culture world three"
   },
   {
     "start": "01/01/1981", 
@@ -987,7 +1506,7 @@ var EVENTS=[
     "end": "31/01/1981", 
     "description": "", 
     "name": "Lesser Town courts exhibition", 
-    "opt_c": 0, 
+    "opt_c": 4, 
     "image": "events/Lesser_Town_courts_exhibition.jpg", 
     "cls": "events culture czech"
   }, 
@@ -1014,11 +1533,11 @@ var EVENTS=[
     "end": "31/01/1982", 
     "description": "", 
     "name": "E.T. Movie Released", 
-    "opt_c": 4, 
+    "opt_c": 0, 
     "image": "events/E.T._Movie_Released.jpg", 
     "cls": "events culture world three"
   }, 
-  {
+  /*{
     "start": "01/01/1982", 
     "end": "31/01/1982", 
     "description": "", 
@@ -1026,7 +1545,7 @@ var EVENTS=[
     "opt_c": 6, 
     "image": "events/politics_canadaindependent.jpg", 
     "cls": "events politics world"
-  },
+  },*/
    {
     "start": "01/01/1982", 
     "end": "31/01/1982", 
@@ -1034,7 +1553,7 @@ var EVENTS=[
     "name": "First CD player", 
     "opt_c": 5, 
     "image": "events/technology_firstCDplayer.jpg", 
-    "cls": "events sciencetechnology world three"
+    "cls": "events sciencetechnology world two"
   },
   {
     "start": "01/01/1982", 
@@ -1059,7 +1578,7 @@ var EVENTS=[
     "end": "31/01/1982", 
     "description": "", 
     "name": "Michael Jackson Releases Thriller", 
-    "opt_c": 0, 
+    "opt_c": 4, 
     "image": "events/Michael_Jackson_Releases_Thriller.gif", 
     "cls": "events culture world"
   }, 
@@ -1070,6 +1589,24 @@ var EVENTS=[
     "name": "National Theater and New Scene is reopened", 
     "opt_c": 4, 
     "image": "events/National_Theater_and_New_Scene_is_reopened.jpg", 
+    "cls": "events culture czech"
+  }, 
+   {
+    "start": "01/01/1983", 
+    "end": "31/01/1983", 
+    "description": "", 
+    "name": "Art symposium at Chmelnice", 
+    "opt_c": 5, 
+    "image": "events/cz_mutejovice.jpg", 
+    "cls": "events culture czech"
+  }, 
+  {
+    "start": "01/01/1984", 
+    "end": "31/01/1984", 
+    "description": "", 
+    "name": "Jaroslav Seifert wins the Nobel Prize for Literature", 
+    "opt_c": 5, 
+    "image": "events68/cz_seifert.jpg", 
     "cls": "events culture czech"
   }, 
   {
@@ -1095,7 +1632,7 @@ var EVENTS=[
     "end": "31/01/1985", 
     "description": "", 
     "name": "Wreck of the Titanic Found", 
-    "opt_c": 0, 
+    "opt_c": 1, 
     "image": "events/Wreck_of_the_Titanic_Found.jpg", 
     "cls": "events sciencetechnology world three"
   }, 
@@ -1180,6 +1717,15 @@ var EVENTS=[
     "image": "events/Havel_president.jpg", 
     "cls": "events politics czech"
   }, 
+   {
+    "start": "01/01/1989", 
+    "end": "31/01/2018", 
+    "description": "", 
+    "name": "Art after the Velvet Revolution", 
+    "opt_c": 0, 
+    "image": "", 
+    "cls": "events politics czech namechapter"
+  }, 
   {
     "start": "01/01/1989", 
     "end": "31/01/1989", 
@@ -1187,7 +1733,7 @@ var EVENTS=[
     "name": "World Wide Web Invented", 
     "opt_c": 1, 
     "image": "events/World_Wide_Web_Invented.jpg", 
-    "cls": "events sciencetechnology world"
+    "cls": "events sciencetechnology world two"
   }, 
   {
     "start": "01/01/1989", 
@@ -1202,8 +1748,8 @@ var EVENTS=[
     "start": "01/01/1989", 
     "end": "31/01/1989", 
     "description": "The result of Velvet Revolution was the end of 41 years of one-party rule in Czechoslovakia", 
-    "name": "Velvet Revolution", 
-    "opt_c": 2, 
+    "name": "", 
+    "opt_c": 0, 
     "image": "events/Velvet_Revolution-02.svg", 
     "cls": "events politics czech textual"
   }, 
@@ -1253,7 +1799,7 @@ var EVENTS=[
     "name": "The Fall of the Soviet Union", 
     "opt_c": 5, 
     "image": "events89/politics_sovietUnion_collapse.jpg", 
-    "cls": "events politics world"
+    "cls": "events politics world zero"
   }, 
   {
     "start": "01/01/1992", 
@@ -1309,7 +1855,7 @@ var EVENTS=[
     "image": "", 
     "cls": "events politics czech"
   }, */
-  {
+  /*{
     "start": "01/01/1994", 
     "end": "31/01/1994", 
     "description": "", 
@@ -1317,8 +1863,8 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "", 
     "cls": "events culture czech"
-  }, 
-  {
+  }, */
+  /*{
     "start": "01/01/1994", 
     "end": "31/01/1994", 
     "description": "", 
@@ -1326,7 +1872,7 @@ var EVENTS=[
     "opt_c": 0, 
     "image": "", 
     "cls": "events culture czech"
-  }, 
+  }, */
     {
     "start": "01/01/1997", 
     "end": "31/01/1997", 
@@ -1338,96 +1884,7 @@ var EVENTS=[
   }, 
 
   
-  {
-    "start": "01/01/1981", 
-    "end": "31/01/1981", 
-    "description": "Magdal\u00e9na Jetelov\u00e1", 
-    "name": "\u017didle", 
-    "opt_c": 1, 
-    "image": "artworks/Jetelova.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1983", 
-    "end": "31/01/1983", 
-    "description": "Judl Stanislav", 
-    "name": "Lacetka", 
-    "opt_c": 1, 
-    "image": "artworks/Judl.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1983", 
-    "end": "31/01/1983", 
-    "description": "Ivan  Kafka", 
-    "name": "Zav\u011b\u0161en\u00ed", 
-    "opt_c": 4, 
-    "image": "artworks/Kafka_zaveseni.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1984", 
-    "end": "31/01/1984", 
-    "description": "Jaroslav R\u00f3na", 
-    "name": "Jaro na vsi", 
-    "opt_c": 1, 
-    "image": "artworks/Rona.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1986", 
-    "end": "31/01/1986", 
-    "description": "Michal Gabriel", 
-    "name": "Untitled", 
-    "opt_c": 0, 
-    "image": "artworks/Gabriel.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1986", 
-    "end": "31/01/1986", 
-    "description": "Ji\u0159\u00ed Sopko", 
-    "name": "Modr\u00fd jezdec", 
-    "opt_c": 5, 
-    "image": "artworks/Sopko.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1987", 
-    "end": "31/01/1987", 
-    "description": "Petr Nikl", 
-    "name": "Klub\u00e1n\u00ed", 
-    "opt_c": 5, 
-    "image": "artworks/Nikl.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1987", 
-    "end": "31/01/1987", 
-    "description": "Michael Rittstein", 
-    "name": "Zab\u00edja\u010dka", 
-    "opt_c": 2, 
-    "image": "artworks/Rittstein.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1988", 
-    "end": "31/01/1988", 
-    "description": "Kurt Gebauer", 
-    "name": "\u010cesk\u00fd rybn\u00edk", 
-    "opt_c": 0, 
-    "image": "artworks/Gebauer.jpg", 
-    "cls": "artworks"
-  }, 
-  {
-    "start": "01/01/1989", 
-    "end": "31/01/1989", 
-    "description": "Ji\u0159\u00ed Na\u010deradsk\u00fd", 
-    "name": "Bora-Bora", 
-    "opt_c": 0, 
-    "image": "artworks/Naceradsky.jpg", 
-    "cls": "artworks"
-  }, 
+  
 
 /*   1989   */
 
@@ -1484,6 +1941,15 @@ var EVENTS=[
     "opt_c": 4, 
     "image": "events89/politics_wtc.gif", 
     "cls": "events culture world zero"
+},
+{
+    "start": "01/01/2001", 
+    "end": "31/01/2001", 
+    "description": "", 
+    "name": "First iPod released", 
+    "opt_c": 2, 
+    "image": "events89/technology_ipod.jpg", 
+    "cls": "events sciencetechnology world"
 },
 {
     "start": "01/01/2002", 
