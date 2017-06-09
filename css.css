@@ -134,7 +134,7 @@ a {
 	height: 50px;
 	width: 100vh;
 	display: inline;
-	z-index: 1000;
+	z-index: 800;
 	height: 40px;
 	font-size: 1.2em;
 	top: 0px;
@@ -313,20 +313,27 @@ a {
     visibility: hidden;
 }
 /*#gridlines img {
+    background-color: #c3ac8b;
+    opacity: 0.2;
+}*/
+
+#gridlines img {
+    pointer-events: none;
 	position:fixed;
-	width: 100%;
-    z-index: 100;
+    left: 50px;
     top: -20px;
     background-color: white;
     opacity: 0.2;
-}*/
+	width: 100%;
+    z-index: 1000;
+}
 
 #gradient_container {
 	position: relative;
 }
 #gradient {
     position:fixed;
-    z-index: 999;
+    z-index: 800;
     right:0; top:0; left:0;
     height:100px;
     opacity: 0.4;
@@ -340,3 +347,91 @@ a {
     background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
     }
+
+.popup, .popup-artwork {
+	font-family: FabrikR;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 5em;
+}
+
+.popup-years {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    font-size: 4em;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+
+.popup h2 {
+    font-size: 3em;
+}
+
+.popup .tags {
+    position: absolute;
+    left: 21.0%;
+    top: 15%;
+}
+
+.popup .text {
+    position: absolute;
+    left: 38.5%;
+    top: 15%;
+    width: 50%;
+}
+
+.popup .image {
+    width: 74%;
+}
+
+
+.popup-artwork h1 {
+    font-size: 5em;
+    margin: 0 0 10px 0;
+}
+
+.popup-artwork h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.popup-artwork .text {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    width: 83.5%;
+    height: 70%;
+}
+
+.popup-artwork .popisy {
+    float: left;
+    width: 29%;
+}
+
+.popup-artwork .popisy .small {
+    font-size: 0.8em;
+    padding-top: 100px;
+    padding-left: 42%;
+}
+
+.popup-artwork .image {
+    width: 70%;
+    height: 100%;
+    float: right;
+    padding-left: 4.2%;
+	overflow:hidden;
+}
+
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+

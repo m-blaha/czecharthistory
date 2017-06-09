@@ -1,6 +1,7 @@
 var _timeline;
 var _EVENTS;
 var popup_tmpl;
+var popup_artwork_tmpl;
 var event_tmpl;
 var audioElement;
 
@@ -149,9 +150,9 @@ function scroll_event(parent) {
 }
 
 function set_year() {
-    var days = ($(window).scrollTop() - $('#divTimeLine').offset().top) / _timeline.dayPixelLength();
+    var days = ($(window).scrollTop() + ($(window).height()/2) - $('#divTimeLine').offset().top) / _timeline.dayPixelLength();
     var year = _timeline.startDate().getFullYear() + Math.floor(days / 365);
-    $('#year').text(year);
+    $('#year').text(shortYear(year));
 }
 
 function scroll(e) {
@@ -228,6 +229,7 @@ function init_music()
 function init(events, start, end, day_pixel_length)
 {
     popup_tmpl = _.template($("#popup_tmpl").html());
+    popup_artwork_tmpl = _.template($("#popup_artwork_tmpl").html());
     event_tmpl = _.template($("#event_tmpl").html());
     init_timeline(start, end, day_pixel_length);
     init_data(events);
