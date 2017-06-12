@@ -59,16 +59,39 @@ a {
 }
 .menuHome .menuItem {
     display: table-cell;
+    position: relative;
     width: 16.6666%;
-    padding-bottom: 90px;
+    border-top: 15px solid transparent;
     border-left: 1px solid #aaa;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.3em;
     vertical-align: bottom;
+    overflow: hidden;
 }
-.menuHome .menuItem span {
-    display: inline-block;
-    transform: rotate(-90deg);
+.menuHome .menuItem:hover {
+    border-top: 15px solid red;
+    font-size: 2.2em;
+}
+.menuHome .menuItem:hover .menuTextBig:after {
+    content: "*";
+    position: absolute;
+    color: red;
+    font-size: 2.2em;
+}
+.menuHome .menuItem .menuTextBig {
+    font-size: 1.0em;
+}
+.menuHome .menuItem .menuItemIn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 92vh;
+    padding: 15px;
+    transform:rotate(-90deg) translate(-50%, 50%);
+    transform-origin: 0% 50%;
 }
 
 /* navigation */
