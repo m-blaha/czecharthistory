@@ -55,7 +55,7 @@ a {
     display: table;
     width: 100%;
     height: 100vh;
-    font-family: FabrikR;
+    font-family: NowAltT;
 }
 .menuHome .menuItem {
     display: table-cell;
@@ -64,19 +64,20 @@ a {
     border-top: 15px solid transparent;
     border-left: 1px solid #aaa;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.2em;
     vertical-align: bottom;
     overflow: hidden;
 }
 .menuHome .menuItem:hover {
     border-top: 15px solid red;
-    font-size: 2.2em;
+    font-size: 1.8em;
 }
 .menuHome .menuItem:hover .menuTextBig:after {
     content: "*";
     position: absolute;
     color: red;
-    font-size: 2.2em;
+    font-family: FabrikB;
+    font-size: 3.8em;
 }
 .menuHome .menuItem .menuTextBig {
     font-size: 1.0em;
