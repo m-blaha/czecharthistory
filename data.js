@@ -632,7 +632,7 @@ var EVENTS=[
     "image": "artworks/Strizek.jpg", 
     "cls": "artworks"
   }, */
-  {
+  /*{
     "opt_c": 3, 
     "cls": "styles", 
     "end": "31/01/1995", 
@@ -757,7 +757,7 @@ var EVENTS=[
     "end": "31/01/1995", 
     "name": "Postmodernism", 
     "start": "01/01/1985"
-  },
+  },*/
 
 /*   1918   */
 {
