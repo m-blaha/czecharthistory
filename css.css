@@ -359,7 +359,7 @@ a {
 	font-size: 3em;
 	line-height: 1.3em;
 	width: 400px;
-	height: 700px !important;
+	height: auto !important;
 }
 .illustration img{
 	width: 100%;
