@@ -90,7 +90,7 @@ var EVENTS=[
     "end": "31/01/1931", 
     "description": "Toyen", 
     "name": "Noc v Oceánii", 
-    "opt_c": 2, 
+    "opt_c": 1, 
     "image": "artworks/Toyen.jpg", 
     "cls": "artworks"
 },
@@ -117,7 +117,7 @@ var EVENTS=[
     "end": "31/01/1932", 
     "description": "Jindřich Štýrský", 
     "name": "Emílie ke mně přichází ve snu", 
-    "opt_c": 6, 
+    "opt_c": 5, 
     "image": "artworks/Styrsky.jpg", 
     "cls": "artworks"
 },
@@ -234,7 +234,7 @@ var EVENTS=[
     "end": "31/01/1948", 
     "description": "Jan Zrzavý", 
     "name": "Červená bárka", 
-    "opt_c": 6, 
+    "opt_c": 2, 
     "image": "artworks/zrzavy.jpg", 
     "cls": "artworks"
 }, 
@@ -463,7 +463,7 @@ var EVENTS=[
     "description": "Judl Stanislav", 
     "name": "Lacetka", 
     "opt_c": 5, 
-    "image": "artworks/JudlX.jpg", 
+    "image": "artworks/Judl.jpg", 
     "cls": "artworks"
   }, 
   {
@@ -471,8 +471,8 @@ var EVENTS=[
     "end": "31/01/1983", 
     "description": "Ivan  Kafka", 
     "name": "Zav\u011b\u0161en\u00ed", 
-    "opt_c": 2, 
-    "image": "artworks/Kafka_zaveseniX.jpg", 
+    "opt_c": 1, 
+    "image": "artworks/Kafka_zaveseni.jpg", 
     "cls": "artworks"
   }, 
   {
@@ -481,7 +481,7 @@ var EVENTS=[
     "description": "Jaroslav R\u00f3na", 
     "name": "Jaro na vsi", 
     "opt_c": 4, 
-    "image": "artworks/RonaX.jpg", 
+    "image": "artworks/Rona.jpg", 
     "cls": "artworks"
   }, 
   {
@@ -516,7 +516,7 @@ var EVENTS=[
     "end": "31/01/1987", 
     "description": "Petr Nikl", 
     "name": "Klub\u00e1n\u00ed", 
-    "opt_c": 6, 
+    "opt_c": 5, 
     "image": "artworks/Nikl.jpg", 
     "cls": "artworks"
   }, 
@@ -613,7 +613,7 @@ var EVENTS=[
     "image": "events/Berlin_is_Divided2.jpg", 
     "cls": "events politics world"
   },
-  {
+  /*{
     "start": "01/01/1968", 
     "end": "31/01/1989", 
     "description": "", 
@@ -621,7 +621,7 @@ var EVENTS=[
     "opt_c": 0, 
     "image": "events/Plastic_People_of_the_Universe.jpg", 
     "cls": "events culture czech two"
-  }, 
+  }, */
   
   /*{
     "start": "01/01/1989", 
@@ -770,31 +770,40 @@ var EVENTS=[
     "cls": "events art world"
 },
 {
+    "start": "01/01/1916", 
+    "end": "31/01/1918", 
+    "description": "", 
+    "name": "End of World War 1", 
+    "opt_c": 0, 
+    "image": "events18/politics_endWW1.jpg", 
+    "cls": "events politics world"
+},
+{
     "start": "01/01/1918", 
-    "end": "31/01/1935", 
+    "end": "31/01/1918", 
     "description": "", 
     "name": "", 
-    "opt_c": 0, 
+    "opt_c": 1, 
     "image": "events18/illustration_president-02.svg", 
     "cls": "events politics illustration"
 },
 {
     "start": "01/01/1918", 
-    "end": "31/01/1939", 
+    "end": "31/01/1920", 
     "description": "", 
-    "name": "First Czechoslovak republic", 
+    "name": "", 
     "opt_c": 4, 
-    "image": "events18/politics_firstczechoslovakiarepublic.gif", 
-    "cls": "events politics czech two"
+    "image": "illustrations/18_foundation-21.svg", 
+    "cls": "events politics illustration"
 },
 {
-    "start": "01/01/1918", 
-    "end": "31/01/1938", 
-    "description": "The interwar period in Czechoslovakia is the artistically strongest period of the 20th century", 
+    "start": "01/01/1924", 
+    "end": "31/01/1924", 
+    "description": "The interwar period in Czechoslovakia is artistically the strongest period of the 20th century", 
     "name": "", 
     "opt_c": 5, 
     "image": "", 
-    "cls": "events art czech paragraph"
+    "cls": "art czech paragraph"
 },
 /*{
     "start": "01/01/1918", 
@@ -807,19 +816,28 @@ var EVENTS=[
 },*/
 {
     "start": "01/01/1918", 
+    "end": "31/01/1919", 
+    "description": "Czechoslovakia rises out of Austro-Hungary as the world's 11th largest economy", 
+    "name": "", 
+    "opt_c": 0, 
+    "image": "", 
+    "cls": "art czech paragraph"
+},
+{
+    "start": "01/01/1918", 
     "end": "31/01/1918", 
     "description": "", 
     "name": "Gerrit Rietveld", 
-    "opt_c": 5, 
+    "opt_c": 4, 
     "image": "events18/art_gerritRetvield_1918.jpg", 
-    "cls": "events art world"
+    "cls": "events art world two"
 },
 {
     "start": "01/01/1919", 
     "end": "31/01/1933", 
     "description": "", 
     "name": "Bauhaus art school", 
-    "opt_c": 3, 
+    "opt_c": 4, 
     "image": "events18/culture_bauhaus.jpg", 
     "cls": "events art world"
 },
@@ -837,7 +855,7 @@ var EVENTS=[
     "end": "31/01/1920", 
     "description": "", 
     "name": "First commercial radio", 
-    "opt_c": 2, 
+    "opt_c": 4, 
     "image": "events18/culture_firstcommercialradio.jpg", 
     "cls": "events culture world"
 },
@@ -845,20 +863,20 @@ var EVENTS=[
     "start": "01/01/1920", 
     "end": "31/01/1920", 
     "description": "", 
-    "name": "Karel Čapek writes the play R.U.R", 
-    "opt_c": 1, 
+    "name": "K. Čapek – R.U.R", 
+    "opt_c": 0, 
     "image": "events18/cz_RUR.jpg", 
     "cls": "events culture czech "
 },
-{
+/*{
     "start": "01/01/1920", 
     "end": "31/01/1920", 
     "description": "", 
-    "name": "The puppet Spejbl steps onto the stage", 
+    "name": "The puppet Spejbl", 
     "opt_c": 5, 
     "image": "events18/cz_spejbl.jpg", 
     "cls": "events culture czech two"
-},
+},*/
 /*{
     "start": "01/01/1920", 
     "end": "31/01/1930", 
@@ -882,7 +900,7 @@ var EVENTS=[
     "end": "31/01/1922", 
     "description": "", 
     "name": "King Tut's tomb discovered", 
-    "opt_c": 1, 
+    "opt_c": 0, 
     "image": "events18/technology_tut.jpg", 
     "cls": "events politics world"
 },
@@ -908,34 +926,34 @@ var EVENTS=[
     "start": "01/01/1925", 
     "end": "31/01/1925", 
     "description": "", 
-    "name": "The First Full-Length Film with Synchronized Dialogue", 
+    "name": "The First Full-Length Film", 
     "opt_c": 2, 
     "image": "events18/culture_firstfilm.jpg", 
-    "cls": "events culture world three"
+    "cls": "events culture world two"
 }, 
 {
     "start": "01/01/1928", 
     "end": "31/01/1928", 
     "description": "", 
-    "name": "Alexander Fleming discovers penicillin", 
-    "opt_c": 4, 
+    "name": "A. Fleming discovers penicillin", 
+    "opt_c": 6, 
     "image": "events18/technology_penicilin.jpg", 
-    "cls": "events sciencetechnology world three"
+    "cls": "events sciencetechnology world"
 },
 {
     "start": "01/01/1928", 
     "end": "31/01/1928", 
     "description": "", 
-    "name": "The very first TV broadcast starring Felix", 
+    "name": "The first TV broadcast", 
     "opt_c": 2, 
     "image": "events18/culture_felix_firstbroadcast.gif", 
-    "cls": "events culture world two"
+    "cls": "events culture world"
 },
 {
     "start": "01/01/1928", 
     "end": "31/01/1928", 
     "description": "", 
-    "name": "Charlie Chaplin film Cirkus", 
+    "name": "Charlie Chaplin – film Cirkus", 
     "opt_c": 0, 
     "image": "events18/culture_chaplin.gif", 
     "cls": "events culture world"
@@ -1027,18 +1045,18 @@ var EVENTS=[
 {
     "start": "01/01/1938", 
     "end": "31/01/1938", 
-    "description": "Czechoslovakia experience the worst moments since its inception, declares mobilization, economy is on the the verge of collapse", 
+    "description": "Czechoslovakia experience the worst moments since its inception, economy is on the the verge of collapse", 
     "name": "", 
-    "opt_c": 0, 
+    "opt_c": 5, 
     "image": "events/", 
-    "cls": "events politics czech"
+    "cls": "events politics czech paragraph"
 },
 
 {
     "start": "01/01/1934", 
     "end": "31/01/1934", 
     "description": "", 
-    "name": "Adolf Hitler becomes Chancellor of Germany", 
+    "name": "Adolf Hitler is Chancellor of Germany", 
     "opt_c": 5, 
     "image": "events38/politics_ww2.gif", 
     "cls": "events politics world"
@@ -1095,7 +1113,7 @@ var EVENTS=[
     "start": "01/01/1947", 
     "end": "31/01/1947", 
     "description": "", 
-    "name": " Czechoslovakia wins the IIHF World Championships for the first time. ", 
+    "name": " Czechoslovakia wins the IIHF", 
     "opt_c": 5, 
     "image": "events38/cz_hockey.jpg", 
     "cls": "events politics czech two"
@@ -1155,7 +1173,7 @@ var EVENTS=[
     "name": "Willem de Kooning", 
     "opt_c": 2, 
     "image": "events48/art_kooning.jpg", 
-    "cls": "events art world two"
+    "cls": "events art world"
 },
 {
     "start": "01/01/1953", 
@@ -1211,7 +1229,7 @@ var EVENTS=[
     "image": "events48/art_beyus.jpg", 
     "cls": "events art world "
 },
-{
+/*{
     "start": "01/01/1957", 
     "end": "31/01/1957", 
     "description": "", 
@@ -1219,13 +1237,13 @@ var EVENTS=[
     "opt_c": 4, 
     "image": "events48/cz_krtecek.jpg", 
     "cls": "events culture czech"
-},
+}, */
 {
     "start": "01/01/1957", 
     "end": "31/01/1957", 
     "description": "", 
     "name": "Launch of Sputnik", 
-    "opt_c": 2, 
+    "opt_c": 1, 
     "image": "events48/technology_sputnik.jpg", 
     "cls": "events sciencetechnology world"
 },
@@ -1252,7 +1270,7 @@ var EVENTS=[
     "end": "31/01/1960", 
     "description": "", 
     "name": "Kofola is launched", 
-    "opt_c": 2, 
+    "opt_c": 5, 
     "image": "events48/cz_kofola.jpg", 
     "cls": "events culture czech"
 },
@@ -1261,7 +1279,7 @@ var EVENTS=[
     "end": "31/01/1961", 
     "description": "", 
     "name": "Yuri Gagarin becomes first man in space", 
-    "opt_c": 2, 
+    "opt_c": 1, 
     "image": "events48/technology_gagarin.jpg", 
     "cls": "events sciencetechnology world "
 },
@@ -1306,11 +1324,11 @@ var EVENTS=[
     "end": "31/01/1964", 
     "description": "", 
     "name": "Andy Warhol – Marilyn Monroe", 
-    "opt_c": 2, 
+    "opt_c": 0, 
     "image": "events48/art_warhol.jpg", 
     "cls": "events art world"
 },
-{
+/*{
     "start": "01/01/1966", 
     "end": "31/01/1966", 
     "description": "", 
@@ -1318,7 +1336,7 @@ var EVENTS=[
     "opt_c": 2, 
     "image": "events48/cz_semtex.jpg", 
     "cls": "events sciencetechnology czech"
-}, 
+}, */
 {
     "start": "01/01/1966", 
     "end": "31/01/1966", 
@@ -1381,10 +1399,10 @@ var EVENTS=[
     "start": "01/01/1971", 
     "end": "31/01/1995", 
     "description": "", 
-    "name": "Christo and Jeanne-Claude – Wrapped Reichstag", 
+    "name": "Christo and Jeanne-Claude", 
     "opt_c": 2, 
     "image": "events68/art_Christo_Reichstag.jpg", 
-    "cls": "events art world"
+    "cls": "events art world two"
 },
 {
     "start": "01/01/1971", 
@@ -1445,7 +1463,7 @@ var EVENTS=[
     "end": "31/01/1980", 
     "description": "", 
     "name": "Cindy Cherman", 
-    "opt_c": 4, 
+    "opt_c": 0, 
     "image": "events68/art_cherman.jpg", 
     "cls": "events art world two"
 },
@@ -1490,7 +1508,7 @@ var EVENTS=[
     "name": "MTv launches", 
     "opt_c": 2, 
     "image": "events68/culture_mtv.jpg", 
-    "cls": "events culture world three"
+    "cls": "events culture world two"
   },
   {
     "start": "01/01/1981", 
@@ -1528,7 +1546,7 @@ var EVENTS=[
     "image": "events/Jean-Michel_Basquiat.gif", 
     "cls": "events art world"
   }, */
-  {
+  /*{
     "start": "01/01/1982", 
     "end": "31/01/1982", 
     "description": "", 
@@ -1536,7 +1554,7 @@ var EVENTS=[
     "opt_c": 0, 
     "image": "events/E.T._Movie_Released.jpg", 
     "cls": "events culture world three"
-  }, 
+  }, */
   /*{
     "start": "01/01/1982", 
     "end": "31/01/1982", 
@@ -1560,9 +1578,9 @@ var EVENTS=[
     "end": "31/01/1982", 
     "description": "", 
     "name": "Keith Haring", 
-    "opt_c": 3, 
+    "opt_c": 0, 
     "image": "events/Keith_Haring.jpg", 
-    "cls": "events art world three"
+    "cls": "events art world"
   }, 
   /*{
     "start": "01/01/1980", 
@@ -1591,7 +1609,7 @@ var EVENTS=[
     "image": "events/National_Theater_and_New_Scene_is_reopened.jpg", 
     "cls": "events culture czech"
   }, 
-   {
+   /*{
     "start": "01/01/1983", 
     "end": "31/01/1983", 
     "description": "", 
@@ -1599,8 +1617,8 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events/cz_mutejovice.jpg", 
     "cls": "events culture czech"
-  }, 
-  {
+  }, */
+  /*{
     "start": "01/01/1984", 
     "end": "31/01/1984", 
     "description": "", 
@@ -1608,8 +1626,8 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events68/cz_seifert.jpg", 
     "cls": "events culture czech"
-  }, 
-  {
+  }, */
+  /*{
     "start": "01/01/1985", 
     "end": "31/01/1985", 
     "description": "", 
@@ -1617,7 +1635,7 @@ var EVENTS=[
     "opt_c": 3, 
     "image": "events/Milos_Forman_wins_Oscar.gif", 
     "cls": "events culture czech two"
-  }, 
+  }, */
   {
     "start": "01/01/1985", 
     "end": "31/01/1985", 
@@ -1634,16 +1652,16 @@ var EVENTS=[
     "name": "Wreck of the Titanic Found", 
     "opt_c": 1, 
     "image": "events/Wreck_of_the_Titanic_Found.jpg", 
-    "cls": "events sciencetechnology world three"
+    "cls": "events sciencetechnology world two"
   }, 
   {
     "start": "01/01/1985", 
     "end": "31/01/1991", 
     "description": "", 
-    "name": "Mikhail Gorbachev is leader of the Soviet Union", 
+    "name": "Mikhail Gorbachev is leader of the SU", 
     "opt_c": 4, 
     "image": "events/Mikhail_Gorbachev_is_leader_of_the_Soviet_Union2.jpg", 
-    "cls": "events politics world three"
+    "cls": "events politics world two"
   }, 
   /*{
     "start": "01/01/1985", 
@@ -1663,7 +1681,7 @@ var EVENTS=[
     "image": "events/Jeff_Koons_Rabbit.jpg", 
     "cls": "events art world"
   }, */
-   {
+   /*{
     "start": "01/01/1986", 
     "end": "31/01/1986", 
     "description": "", 
@@ -1671,7 +1689,7 @@ var EVENTS=[
     "opt_c": 6, 
     "image": "events/politics_Australia_Day.jpg", 
     "cls": "events politics world"
-  },
+  },*/
   {
     "start": "01/01/1986", 
     "end": "31/01/1986", 
@@ -1703,7 +1721,7 @@ var EVENTS=[
     "start": "01/01/1988", 
     "end": "31/01/1988", 
     "description": "", 
-    "name": "Jeff Koons \u2013 Michael Jackson and Bubbles X", 
+    "name": "Jeff Koons", 
     "opt_c": 3, 
     "image": "events/Jeff_Koons_Michael_Jackson_and_Bubbles.jpg", 
     "cls": "events art world"
@@ -1731,9 +1749,9 @@ var EVENTS=[
     "end": "31/01/1989", 
     "description": "", 
     "name": "World Wide Web Invented", 
-    "opt_c": 1, 
+    "opt_c": 6, 
     "image": "events/World_Wide_Web_Invented.jpg", 
-    "cls": "events sciencetechnology world two"
+    "cls": "events sciencetechnology world"
   }, 
   {
     "start": "01/01/1989", 
@@ -1745,13 +1763,22 @@ var EVENTS=[
     "cls": "events politics world"
   }, 
   {
-    "start": "01/01/1989", 
-    "end": "31/01/1989", 
+    "start": "01/01/1990", 
+    "end": "31/01/1990", 
     "description": "The result of Velvet Revolution was the end of 41 years of one-party rule in Czechoslovakia", 
     "name": "", 
     "opt_c": 0, 
+    "image": "", 
+    "cls": "events politics czech paragraph"
+  }, 
+    {
+    "start": "01/01/1989", 
+    "end": "31/01/1989", 
+    "description": "", 
+    "name": "", 
+    "opt_c": 3, 
     "image": "events/Velvet_Revolution-02.svg", 
-    "cls": "events politics czech textual"
+    "cls": "events politics paragraph"
   }, 
   /*{
     "start": "01/01/1990", 
@@ -1770,7 +1797,7 @@ var EVENTS=[
     "end": "31/01/1990", 
     "description": "", 
     "name": "Hubble Space Telescope launch", 
-    "opt_c": 1, 
+    "opt_c": 2, 
     "image": "events89/technology_hubble.jpg", 
     "cls": "events sciencetechnology world"
   }, 
@@ -1799,7 +1826,7 @@ var EVENTS=[
     "name": "The Fall of the Soviet Union", 
     "opt_c": 5, 
     "image": "events89/politics_sovietUnion_collapse.jpg", 
-    "cls": "events politics world zero"
+    "cls": "events politics world"
   }, 
   {
     "start": "01/01/1992", 
@@ -1818,8 +1845,8 @@ var EVENTS=[
     "opt_c": 5, 
     "image": "events/1st_internet_connection.jpg", 
     "cls": "events sciencetechnology czech"
-  }, 
-  {
+  },
+  /*{
     "start": "01/01/1992", 
     "end": "31/01/1992", 
     "description": "", 
@@ -1827,7 +1854,16 @@ var EVENTS=[
     "opt_c": 3, 
     "image": "events/1st_McDonald_restaurant.jpg", 
     "cls": "events culture czech"
-  }, 
+  },*/ 
+  {
+    "start": "01/01/1993", 
+    "end": "31/01/1993", 
+    "description": "The Velvet Divorce – Czechoslovakia and Slovakia split amicably", 
+    "name": "", 
+    "opt_c": 5, 
+    "image": "", 
+    "cls": "events art czech paragraph"
+},
   /*{
     "start": "01/01/1990", 
     "end": "31/01/1993", 
@@ -1940,7 +1976,7 @@ var EVENTS=[
     "name": "World Trade Center and the Pentagon are attacked", 
     "opt_c": 4, 
     "image": "events89/politics_wtc.gif", 
-    "cls": "events culture world zero"
+    "cls": "events culture world         "
 },
 {
     "start": "01/01/2001", 

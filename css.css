@@ -59,16 +59,40 @@ a {
 }
 .menuHome .menuItem {
     display: table-cell;
-    width: 16.6666%;
+    position: relative;
     padding-bottom: 90px;
     border-left: 1px solid #aaa;
     color: #fff;
-    font-size: 2em;
+    font-size: 1em;
     vertical-align: bottom;
+    text-align: left;
+    transition: all 1s ease-out, visibility 1ms;
+}
+.menuHome .period1 {
+	width: 20%;
+}
+.menuHome .period2 {
+	width: 10%;
+}
+.menuHome .period3 {
+	width: 20%;
+}
+.menuHome .period4 {
+	width: 12%;
+}
+.menuHome .period5 {
+	width: 9%;
+}
+.menuHome .period6 {
+	width: 29%;
 }
 .menuHome .menuItem span {
-    display: inline-block;
+    display: block;
     transform: rotate(-90deg);
+ -webkit-transform: rotate(-90deg); /* Safari/Chrome */
+}
+.menuHome .menuItem:hover {
+	font-size: 1.5em;
 }
 
 /* navigation */
@@ -120,6 +144,30 @@ a {
     margin-right: 55px;
     transform: rotate(90deg);
 }
+
+.aboutsocial {
+	position: relative;
+}
+.aboutsocial .container {
+	position: fixed;
+	height: 50px;
+	width: 100vh;
+	display: inline;
+	top: 15px;
+	z-index: 1000;
+	right: 40px;
+
+}
+.vertical-line {
+	height: 97%;
+	width: 1px; /* Line width */
+    background-color: black; /* Line color */
+	margin-left: 55px;
+	position: fixed;
+	margin-top: 15px; margin-bottom: 10px;
+	z-index: 1000;
+
+}
 /* navigation */
 
 /*.navigationSidePanel {
@@ -156,15 +204,15 @@ a {
 }
 #year {
 	font-family: Arial;
-	font-size: 15em;
+	font-size: 25em;
 	line-height: 100vh;
-  margin: 0 auto;
-  position: fixed;
-  bottom: 0; right: 0; top: 0; left: 0;
-  text-align: center;
-  z-index: 1000;
-  color: white;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  	margin: 0 auto;
+  	position: fixed;
+  	bottom: 0; right: 0; top: 0; left: 0;
+  	text-align: center;
+  	color: white;
+  	/*z-index: 1000;*/
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* filters */
@@ -172,24 +220,26 @@ a {
 	font-family: FabrikR;
 	position: fixed;
 	height: 50px;
-	width: 100vh;
 	display: inline;
-	z-index: 800;
+	z-index: 1000;
 	height: 40px;
 	font-size: 1.2em;
 	top: 0px;
-	right: 0px;
-	bottom:0px;
+	left: 80px;
 }
 .filters div {
 	margin-top: 10px;
 }
 .classfilter {
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 15px;
+}
+.classfilter:hover {
+	opacity: 0.6;
 }
 .strikethrough{
   text-decoration: line-through;
+  opacity: 0.6;
 }
 
 
@@ -238,27 +288,27 @@ a {
 }
 .event .inner {
     overflow: hidden;
+    width: 400px;
+	height: 300px;
     position: fixed;
     pointer-events:auto;
     transition: all 2s ease-out, visibility 1ms;
 }
 .event .inner img {
-	width: 400px;
+	width: 100%;
 	filter: grayscale(100%);
-	border: 2px solid black;
 	/*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);*/
 }
 
 .event .inner:hover {
 	transform: scale(1.05);
 }
-.czech img {
+/*.czech img {
 	border-radius: 50%;
-}
+}*/
 .event .name {
-	text-align: center;
 	font-family: Arial;
-	font-size: 20px;
+	font-size: 13px;
 	width: 400px;
 }
 .namechapter .name {
@@ -272,8 +322,12 @@ a {
 	font-family: FabrikR;
 	visibility: hidden;
 }
+.artworks .inner {
+	height: auto !important;
+}
 .artworks .inner img {
-	width: 600px;
+	width: 400px;
+	height: auto !important;
 	filter: none !important;
 	z-index: 100;
 	visibility: visible !important;
@@ -282,54 +336,56 @@ a {
 	visibility: hidden;
 }
 .artworks .description {
-	position: absolute;
-	top: -20px; right: -400px;
-	font-family: FabrikB;
-	font-size: 4em;
-	color: white;
-	transform: rotate(90deg) translate(0%, 100%);
-	-webkit-transform-origin: 0 100%;
-	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
+	font-family: FabrikR !important;
+	font-size: 1.5em;
+	line-height: 1em;	top: -30px;
+	/*color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	transform: rotate(90deg);
+	transform-origin: left top 0;*/
 }
+
 .styles .name {
 	visibility: hidden;
 }
 .textual .inner img{
-	width: 400px !important;
+	width: 200px !important;
 }
 .description {
 	font-size: 19px;
 }
 .paragraph .description {
-	font-family: Signatura !important;
-	font-size: 2.5em;
-	width: 300px;
+	font-family: FabrikR !important;
+	font-size: 3em;
+	line-height: 1.3em;
+	width: 400px;
+	height: 700px !important;
 }
-.illustration .inner img{
-	width: 40%;
+.illustration img{
+	width: 100%;
+	height: 500px !important;
 }
 
 /* sizes */
 
-.three .name {
-	width: 20% !important;
+/*.three .name {
+	width: 10% !important;
 }
 .three img {
-	width: 20% !important;
+	width: 10% !important;
 }
 .two .name {
-	width: 40% !important;
+	width: 200px !important;
 }
 .two img {
-	width: 40% !important;
+	width: 200px !important;
 }
 .zero .name {
-	width: 50% !important;
+	width: 40% !important;
 }
 .zero img {
-	width: 50% !important;
-}
+	width: 40% !important;
+}*/
 
 
 
@@ -345,13 +401,7 @@ a {
 
 
 
-#gridlines img {
-	position:fixed;
-	width: 100%;
-    z-index: 100;
-    top: -20px;
-    visibility: hidden;
-}
+
 /*#gridlines img {
     background-color: #c3ac8b;
     opacity: 0.2;
@@ -362,10 +412,9 @@ a {
 	position:fixed;
     left: 50px;
     top: -20px;
-    background-color: white;
-    opacity: 0.2;
 	width: 100%;
     z-index: 1000;
+    visibility: hidden;
 }
 
 #gradient_container {
@@ -396,7 +445,7 @@ a {
     position: absolute;
     top: 0;
     right: 10px;
-    font-size: 5em;
+    font-size: 3.3em;
 }
 
 .popup-years {
@@ -432,6 +481,7 @@ a {
 
 
 .popup-artwork h1 {
+	font-family: FabrikR;
     font-size: 5em;
     margin: 0 0 10px 0;
 }
@@ -443,9 +493,9 @@ a {
 
 .popup-artwork .text {
     position: absolute;
-    left: 10%;
+    left: 15%;
     top: 15%;
-    width: 83.5%;
+    width: 78.5%;
     height: 70%;
 }
 
@@ -461,7 +511,7 @@ a {
 }
 
 .popup-artwork .image {
-    width: 70%;
+    width: 60%;
     height: 100%;
     float: right;
     padding-left: 4.2%;
@@ -471,7 +521,39 @@ a {
 
 .img-responsive {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+}
+
+
+
+/**** Media Query ***/
+@media only screen and (max-width: 1280px) {
+    .event .inner img {
+	width: 280px;
+	height: 200px;
+	}
+	.paragraph .description {
+	font-family: FabrikR !important;
+	font-size: 3em;
+	line-height: 1.4em;
+	width: 300px;
+	height: auto;
+	}
+	#year {
+	font-family: Arial;
+	font-size: 8em;
+	}
+	.popup-years {
+    position: absolute;
+    font-size: 3em;
+	}
+	.popup h2 {
+    font-size: 1.5em;
+	}
+	.popup-artwork h2 {
+    font-size: 1.5em;
+	}
+
 }
 
