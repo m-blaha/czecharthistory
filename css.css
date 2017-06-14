@@ -289,13 +289,14 @@ a {
     pointer-events: none;
 }
 .event .inner {
-    overflow: hidden;
-    width: 400px;
+    /*overflow: hidden;*/
+    /*width: 400px;*/
 	height: 300px;
     position: fixed;
     pointer-events:auto;
     transition: all 2s ease-out, visibility 1ms;
     cursor: url(img/link_cursor.svg), auto;
+    text-align: right;
 }
 .event .inner img {
 	width: 100%;
@@ -312,7 +313,6 @@ a {
 .event .name {
 	font-family: Arial;
 	font-size: 13px;
-	width: 400px;
 }
 .namechapter .name {
 	font-family: FabrikR;
@@ -339,13 +339,17 @@ a {
 	visibility: hidden;
 }
 .artworks .description {
+    position:absolute;
+    top: 70%;
+    right: 0;
+    width: 400px;
 	font-family: FabrikR !important;
-	font-size: 1.5em;
-	line-height: 1em;	top: -30px;
-	/*color: white;
+	font-size: 3em;
+	line-height: 1em;
+	color: white;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	transform: rotate(90deg);
-	transform-origin: left top 0;*/
+	transform: rotate(90deg) translate(0%, 50%);
+	transform-origin: 100% 100%;
 }
 
 .styles .name {
