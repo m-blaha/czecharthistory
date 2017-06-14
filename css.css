@@ -289,8 +289,8 @@ a {
     pointer-events: none;
 }
 .event .inner {
-    /*overflow: hidden;*/
-    /*width: 400px;*/
+    overflow: hidden;
+    width: 400px;
 	height: 300px;
     position: fixed;
     pointer-events:auto;
@@ -326,6 +326,7 @@ a {
 	visibility: hidden;
 }
 .artworks .inner {
+    overflow: visible;
 	height: auto !important;
 }
 .artworks .inner img {
